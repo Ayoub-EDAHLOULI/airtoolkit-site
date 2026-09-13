@@ -1,38 +1,82 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
+
+const NAV_LINKS = [
+  { href: "/tools", label: "tools" },
+  { href: "/security", label: "security" },
+  { href: "/faq", label: "faq" },
+];
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link
           href="/"
           className="flex items-center gap-2 font-mono text-sm text-text"
+          onClick={() => setOpen(false)}
         >
           <span className="text-primary">$</span>
           <span className="font-semibold">airtoolkit</span>
         </Link>
 
         <nav className="hidden items-center gap-8 font-mono text-sm text-subtext sm:flex">
-          <Link href="/tools" className="hover:text-text transition-colors">
-            tools
-          </Link>
-          <Link href="/security" className="hover:text-text transition-colors">
-            security
-          </Link>
-          <Link href="/faq" className="hover:text-text transition-colors">
-            faq
-          </Link>
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="hover:text-text transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
-        {/* Points at the repo until a GitHub Release is published — swap to the release asset URL then. */}
-        <a
-          href="https://github.com/Ayoub-EDAHLOULI/AirToolkit"
-          target="_blank"
-          rel="noreferrer"
-          className="border border-primary px-4 py-1.5 font-mono text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-        >
-          download
-        </a>
+        <div className="flex items-center gap-3">
+          {/* Points at the repo until a GitHub Release is published — swap to the release asset URL then. */}
+          <a
+            href="https://github.com/Ayoub-EDAHLOULI/AirToolkit"
+            target="_blank"
+            rel="noreferrer"
+            className="border border-primary px-4 py-1.5 font-mono text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+          >
+            download
+          </a>
+
+          <button
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            className="text-text sm:hidden"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
+      </div>
+
+      <div
+        className="grid overflow-hidden border-border transition-[grid-template-rows] duration-300 ease-out sm:hidden"
+        style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+      >
+        <div className="min-h-0 border-t border-border">
+          <nav className="flex flex-col px-6 py-4 font-mono text-sm text-subtext">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="border-b border-border py-3 last:border-b-0 hover:text-text transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </header>
   );

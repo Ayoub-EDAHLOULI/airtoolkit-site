@@ -4,18 +4,18 @@ import Reveal from "./Reveal";
 const POINTS = [
   {
     num: "01",
-    title: "Placeholder point one",
-    body: "Placeholder body text describing a problem with browser-based dev tools on locked-down machines.",
+    title: "Locked-down VMs can't reach a browser tool",
+    body: "Internet-restricted machines at security- and access-control-focused companies are common. Pulling up a browser-based JSON formatter or regex tester simply isn't an option there.",
   },
   {
     num: "02",
-    title: "Placeholder point two",
-    body: "Placeholder body text describing hidden telemetry/analytics in most 'offline' tool sites.",
+    title: "\"Offline\" web tools usually aren't",
+    body: "Most sites claiming to be offline-friendly still ship analytics, font CDNs, or update checks — which fail loudly, or silently phone home, the moment they're blocked.",
   },
   {
     num: "03",
-    title: "Placeholder point three",
-    body: "Placeholder body text describing AirToolkit's zero-network-calls guarantee.",
+    title: "No network dependency, period",
+    body: "AirToolkit makes zero network calls of its own: no telemetry, no auto-update, no phone-home. The one exception — the API Request Tester — is opt-in and documented.",
   },
 ];
 
@@ -25,10 +25,10 @@ export default function WhyOffline() {
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
           <h2 className="text-2xl font-bold tracking-tight text-text sm:text-3xl">
-            Placeholder section title — &quot;Why offline matters&quot;
+            Why offline matters
           </h2>
           <p className="mt-3 max-w-xl text-subtext">
-            Placeholder intro paragraph setting up the problem statement.
+            This came out of a real need, not a feature checklist.
           </p>
         </Reveal>
 

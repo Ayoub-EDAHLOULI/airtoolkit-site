@@ -3,15 +3,15 @@ import Reveal from "./Reveal";
 const CHECKS = [
   {
     title: "Static code audit",
-    body: "Placeholder — grep the entire source for fetch/XMLHttpRequest/WebSocket and Rust-side network primitives; only the API Request Tester should match.",
+    body: "Grep the entire source for fetch/XMLHttpRequest/WebSocket and Rust-side network primitives. Only the API Request Tester should match — run on every change.",
   },
   {
     title: "OS-level firewall block",
-    body: "Placeholder — block all outbound traffic for the packaged binary and confirm every tool still works fully.",
+    body: "Block all outbound traffic for the packaged binary at the Windows Firewall and confirm every other tool keeps working fully.",
   },
   {
     title: "Network-isolated VM",
-    body: "Placeholder — run the same build with no virtual NIC for the strongest guarantee.",
+    body: "For a stronger guarantee, run the same build with no virtual NIC at all instead of relying on a firewall rule.",
   },
 ];
 
@@ -21,12 +21,12 @@ export default function Verification() {
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
           <h1 className="text-2xl font-bold tracking-tight text-text sm:text-3xl">
-            Placeholder page title — &quot;Verifiable, not just claimed&quot;
+            Verifiable, not just claimed
           </h1>
           <p className="mt-3 max-w-xl text-subtext">
-            Placeholder intro paragraph. Replace with the real offline
-            verification writeup (static code audit + OS-level firewall/VM
-            test) once it&apos;s finalized in the AirToolkit README.
+            &quot;Zero network calls&quot; is a checkable claim, not a
+            marketing line. Here&apos;s exactly how it&apos;s checked —
+            reproduce it yourself if you don&apos;t take our word for it.
           </p>
         </Reveal>
 
@@ -69,6 +69,16 @@ export default function Verification() {
             </div>
           </Reveal>
         </div>
+
+        <Reveal delayMs={300}>
+          <p className="mt-10 max-w-2xl border-l-2 border-border pl-4 text-sm text-subtext">
+            <span className="font-medium text-text">Current status:</span> the
+            static audit above has been run against the full codebase with no
+            unexpected matches. The firewall/VM run is a manual step against
+            a signed release build — not yet performed. Treat any offline
+            claim as unverified until this line is updated.
+          </p>
+        </Reveal>
       </div>
     </section>
   );

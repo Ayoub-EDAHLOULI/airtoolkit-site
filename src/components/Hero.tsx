@@ -8,25 +8,30 @@ export default function Hero() {
           </p>
 
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-text sm:text-5xl">
-            Placeholder headline goes here
+            39 dev tools. Zero network calls.
           </h1>
 
           <p className="mt-4 max-w-lg text-lg text-subtext">
-            Placeholder subheadline — one or two sentences pitching AirToolkit
-            as an offline-first developer toolbox for air-gapped and
-            locked-down machines.
+            AirToolkit bundles the utilities you reach for daily — JSON
+            formatting, regex testing, hashing, JWT decoding, and more — into
+            one desktop app that never makes a network call on its own. No
+            telemetry, no auto-update, no phone-home. Ever.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            {/* Placeholder — link to a real GitHub Releases URL once published. */}
+            {/* Points at the repo until a GitHub Release is published — swap to the release asset URL then. */}
             <a
-              href="#"
+              href="https://github.com/Ayoub-EDAHLOULI/AirToolkit"
+              target="_blank"
+              rel="noreferrer"
               className="bg-primary px-5 py-2.5 font-mono text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"
             >
               download for windows
             </a>
             <a
-              href="#"
+              href="https://github.com/Ayoub-EDAHLOULI/AirToolkit"
+              target="_blank"
+              rel="noreferrer"
               className="border border-border px-5 py-2.5 font-mono text-sm font-semibold text-text transition-colors hover:border-border-strong hover:bg-surface"
             >
               view on github

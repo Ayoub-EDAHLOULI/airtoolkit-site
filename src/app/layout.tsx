@@ -14,23 +14,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Placeholder metadata — replace with final copy and a real og-image before launch.
+// TODO: add a real og-image.png (1200x630) before launch — referenced below but not yet created.
+const SITE_TITLE = "AirToolkit — 39 Dev Tools, Zero Network Calls";
+const SITE_DESCRIPTION =
+  "An offline-first developer toolbox for air-gapped and locked-down Windows machines. No telemetry, no auto-update, no phone-home — ever.";
+
 export const metadata: Metadata = {
-  title: "AirToolkit — Offline Developer Toolbox",
-  description:
-    "Placeholder description: AirToolkit is an offline-first developer toolbox with zero network calls, built for air-gapped and locked-down machines.",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   openGraph: {
-    title: "AirToolkit — Offline Developer Toolbox",
-    description:
-      "Placeholder description: AirToolkit is an offline-first developer toolbox with zero network calls, built for air-gapped and locked-down machines.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     type: "website",
     images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AirToolkit — Offline Developer Toolbox",
-    description:
-      "Placeholder description: AirToolkit is an offline-first developer toolbox with zero network calls, built for air-gapped and locked-down machines.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: ["/og-image.png"],
   },
 };

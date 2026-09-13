@@ -5,20 +5,29 @@ import Reveal from "./Reveal";
 
 const QUESTIONS = [
   {
-    question: "Placeholder question one?",
-    answer: "Placeholder answer text.",
+    question: "Does AirToolkit really make zero network calls?",
+    answer:
+      "Yes, with one documented exception: the API Request Tester, whose entire purpose is sending a request you compose on demand. Every other tool never touches the network. See the Security page for exactly how this is checked.",
   },
   {
-    question: "Placeholder question two?",
-    answer: "Placeholder answer text.",
+    question: "Do I need an internet connection to install or run it?",
+    answer:
+      "No. Once you have the installer, setup and every tool work fully offline — no account, no license server, no update check.",
   },
   {
-    question: "Placeholder question three?",
-    answer: "Placeholder answer text.",
+    question: "What platforms does it support?",
+    answer:
+      "Windows, built with Tauri. It was built specifically for locked-down Windows VMs, which is the primary target today.",
   },
   {
-    question: "Placeholder question four?",
-    answer: "Placeholder answer text.",
+    question: "Is it open source?",
+    answer:
+      "Yes — the full source is on GitHub. You're welcome to read it, audit it, or build it yourself instead of trusting a packaged binary.",
+  },
+  {
+    question: "Why not just use browser-based tools?",
+    answer:
+      "Most browser-based dev tool sites are unreachable on internet-restricted machines, and many that claim to work offline still load analytics or font CDNs that fail (or silently phone home) the moment they're blocked.",
   },
 ];
 
@@ -56,7 +65,7 @@ export default function Faq() {
       <div className="mx-auto max-w-2xl px-6">
         <Reveal>
           <h1 className="text-2xl font-bold tracking-tight text-text sm:text-3xl">
-            Placeholder page title — &quot;Frequently asked questions&quot;
+            Frequently asked questions
           </h1>
         </Reveal>
 

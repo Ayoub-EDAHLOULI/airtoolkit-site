@@ -4,7 +4,7 @@ import Verification from "@/components/Verification";
 export const metadata: Metadata = {
   title: "Security & Verification — AirToolkit",
   description:
-    "Placeholder description: how AirToolkit's zero-network-calls claim is verified.",
+    "How AirToolkit's zero-network-calls claim is checked: a static code audit and an OS-level firewall/VM test, both reproducible yourself.",
 };
 
 export default function SecurityPage() {

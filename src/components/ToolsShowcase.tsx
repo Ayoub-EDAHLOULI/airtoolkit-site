@@ -7,12 +7,11 @@ export default function ToolsShowcase() {
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
           <h1 className="text-2xl font-bold tracking-tight text-text sm:text-3xl">
-            Placeholder page title — &quot;~38 tools, one app&quot;
+            39 tools, one app
           </h1>
           <p className="mt-3 max-w-xl text-subtext">
-            Placeholder intro paragraph. Replace the TOOLS array in
-            src/lib/tools.ts with the real list from AirToolkit&apos;s own
-            src/tools.ts.
+            Everything runs locally, in the same window, with no per-tool
+            setup. Search the sidebar in the app, or browse by category here.
           </p>
         </Reveal>
 

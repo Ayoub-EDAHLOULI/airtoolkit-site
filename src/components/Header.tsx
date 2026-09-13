@@ -24,9 +24,11 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Placeholder — link to a real GitHub Releases URL once published. */}
+        {/* Points at the repo until a GitHub Release is published — swap to the release asset URL then. */}
         <a
-          href="#"
+          href="https://github.com/Ayoub-EDAHLOULI/AirToolkit"
+          target="_blank"
+          rel="noreferrer"
           className="border border-primary px-4 py-1.5 font-mono text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
         >
           download

@@ -4,7 +4,7 @@ import Faq from "@/components/Faq";
 export const metadata: Metadata = {
   title: "FAQ — AirToolkit",
   description:
-    "Placeholder description: frequently asked questions about AirToolkit.",
+    "Answers about AirToolkit's offline guarantee, supported platforms, and open-source availability.",
 };
 
 export default function FaqPage() {

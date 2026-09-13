@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0b0d;
-  --surface: #101216;
-  --surface-hover: #15181d;
-  --border: #23262c;
-  --border-strong: #34383f;
-  --text: #e8e9eb;
-  --subtext: #83878f;
-  --muted: #575b62;
+  --background: #0d1117;
+  --background-subtle: #0a0d12;
+  --surface: #161b22;
+  --surface-hover: #1c2129;
+  --border: #262c36;
+  --border-strong: #3a4150;
+  --text: #e6edf3;
+  --subtext: #8b949e;
+  --muted: #5b6472;
 
   --primary: #0a84ff;
   --primary-hover: #3396ff;
@@ -18,6 +19,7 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-subtle: var(--background-subtle);
   --color-surface: var(--surface);
   --color-surface-hover: var(--surface-hover);
   --color-border: var(--border);
@@ -39,7 +41,14 @@ html {
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(
+      80% 40% at 50% 0%,
+      color-mix(in srgb, var(--primary) 7%, transparent),
+      transparent 60%
+    ),
+    var(--background);
+  background-attachment: fixed;
   color: var(--text);
 }
 

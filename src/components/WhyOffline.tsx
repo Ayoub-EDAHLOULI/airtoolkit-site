@@ -21,7 +21,7 @@ const POINTS = [
 
 export default function WhyOffline() {
   return (
-    <section className="border-b border-border py-24">
+    <section className="border-b border-border bg-background-subtle py-24">
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
           <h2 className="text-2xl font-bold tracking-tight text-text sm:text-3xl">

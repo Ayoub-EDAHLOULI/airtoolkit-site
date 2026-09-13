@@ -9,18 +9,15 @@ export default function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm text-subtext sm:flex">
-          <a href="#why-offline" className="hover:text-text transition-colors">
-            Why offline
-          </a>
-          <a href="#tools" className="hover:text-text transition-colors">
+          <Link href="/tools" className="hover:text-text transition-colors">
             Tools
-          </a>
-          <a href="#how-it-works" className="hover:text-text transition-colors">
-            How it works
-          </a>
-          <a href="#verification" className="hover:text-text transition-colors">
-            Verification
-          </a>
+          </Link>
+          <Link href="/security" className="hover:text-text transition-colors">
+            Security
+          </Link>
+          <Link href="/faq" className="hover:text-text transition-colors">
+            FAQ
+          </Link>
         </nav>
 
         {/* Placeholder — link to a real GitHub Releases URL once published. */}

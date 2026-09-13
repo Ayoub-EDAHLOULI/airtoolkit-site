@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-6 py-24 text-center sm:py-32">
       <span className="rounded-full border border-border px-3 py-1 text-xs font-medium text-subtext">
-        Placeholder eyebrow — e.g. "100% offline · zero network calls"
+        Placeholder eyebrow — e.g. &quot;100% offline · zero network calls&quot;
       </span>
 
       <h1 className="text-4xl font-bold tracking-tight text-text sm:text-6xl">
@@ -10,9 +10,8 @@ export default function Hero() {
       </h1>
 
       <p className="max-w-2xl text-lg text-subtext">
-        Placeholder subheadline — one or two sentences pitching AirToolkit as
-        an offline-first developer toolbox for air-gapped and locked-down
-        machines.
+        Placeholder subheadline — one or two sentences pitching AirToolkit as an
+        offline-first developer toolbox for air-gapped and locked-down machines.
       </p>
 
       <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row">

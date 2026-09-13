@@ -2,14 +2,14 @@ import { TOOLS, TOOL_CATEGORIES } from "@/lib/tools";
 
 export default function ToolsShowcase() {
   return (
-    <section id="tools" className="border-t border-border py-24">
+    <section className="py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-3xl font-bold text-text sm:text-4xl">
-          Placeholder section title — "~38 tools, one app"
-        </h2>
+        <h1 className="text-3xl font-bold text-text sm:text-4xl">
+          Placeholder page title — &quot;~38 tools, one app&quot;
+        </h1>
         <p className="mt-3 max-w-2xl text-subtext">
           Placeholder intro paragraph. Replace the TOOLS array in
-          src/lib/tools.ts with the real list from AirToolkit's own
+          src/lib/tools.ts with the real list from AirToolkit&apos;s own
           src/tools.ts.
         </p>
 

@@ -3,18 +3,18 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="border-t border-border py-10">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 text-sm text-subtext sm:flex-row sm:justify-between">
-        <span>© {new Date().getFullYear()} AirToolkit</span>
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-6 font-mono text-sm text-subtext sm:flex-row sm:justify-between">
+        <span>© {new Date().getFullYear()} airtoolkit</span>
 
         <nav className="flex items-center gap-6">
           <Link href="/tools" className="hover:text-text transition-colors">
-            Tools
+            tools
           </Link>
           <Link href="/security" className="hover:text-text transition-colors">
-            Security
+            security
           </Link>
           <Link href="/faq" className="hover:text-text transition-colors">
-            FAQ
+            faq
           </Link>
           <a
             href="https://github.com/Ayoub-EDAHLOULI/AirToolkit"
@@ -22,7 +22,7 @@ export default function Footer() {
             rel="noreferrer"
             className="hover:text-text transition-colors"
           >
-            GitHub
+            github
           </a>
         </nav>
       </div>

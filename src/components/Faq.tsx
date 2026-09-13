@@ -1,3 +1,8 @@
+"use client";
+
+import { useState } from "react";
+import Reveal from "./Reveal";
+
 const QUESTIONS = [
   {
     question: "Placeholder question one?",
@@ -17,22 +22,49 @@ const QUESTIONS = [
   },
 ];
 
+function FaqItem({ question, answer }: { question: string; answer: string }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="border-b border-border">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="flex w-full items-center justify-between gap-4 py-5 text-left"
+      >
+        <span className="font-medium text-text">{question}</span>
+        <span
+          className={`shrink-0 font-mono text-subtext transition-transform duration-500 ease-out ${open ? "rotate-45" : ""}`}
+        >
+          +
+        </span>
+      </button>
+      <div
+        className="grid overflow-hidden transition-[grid-template-rows] duration-500 ease-out"
+        style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+      >
+        <div className="min-h-0">
+          <p className="pb-5 text-sm text-subtext">{answer}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Faq() {
   return (
     <section className="py-24">
-      <div className="mx-auto max-w-3xl px-6">
-        <h1 className="text-3xl font-bold text-text sm:text-4xl">
-          Placeholder page title — &quot;Frequently asked questions&quot;
-        </h1>
+      <div className="mx-auto max-w-2xl px-6">
+        <Reveal>
+          <h1 className="text-2xl font-bold tracking-tight text-text sm:text-3xl">
+            Placeholder page title — &quot;Frequently asked questions&quot;
+          </h1>
+        </Reveal>
 
-        <div className="mt-12 flex flex-col divide-y divide-border border-t border-border">
+        <Reveal delayMs={100} className="mt-10 border-t border-border">
           {QUESTIONS.map((item) => (
-            <div key={item.question} className="py-6">
-              <h3 className="font-semibold text-text">{item.question}</h3>
-              <p className="mt-2 text-sm text-subtext">{item.answer}</p>
-            </div>
+            <FaqItem key={item.question} {...item} />
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

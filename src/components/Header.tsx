@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "/tools", label: "tools" },
   { href: "/security", label: "security" },
   { href: "/faq", label: "faq" },
+  { href: "/about", label: "about" },
 ];
 
 export default function Header() {
@@ -21,7 +23,7 @@ export default function Header() {
           className="flex items-center gap-2 font-mono text-sm text-text"
           onClick={() => setOpen(false)}
         >
-          <span className="text-primary">$</span>
+          <Image src="/logo.png" alt="" width={24} height={24} priority />
           <span className="font-semibold">airtoolkit</span>
         </Link>
 
@@ -38,11 +40,8 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          {/* Points at the repo until a GitHub Release is published — swap to the release asset URL then. */}
           <a
-            href="https://github.com/Ayoub-EDAHLOULI/AirToolkit"
-            target="_blank"
-            rel="noreferrer"
+            href="https://github.com/Ayoub-EDAHLOULI/AirToolkit/releases/download/v0.1.0/airtoolkit_0.1.0_x64-setup.exe"
             className="border border-primary px-4 py-1.5 font-mono text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
           >
             download

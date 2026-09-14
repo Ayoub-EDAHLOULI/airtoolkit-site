@@ -15,7 +15,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// TODO: add a real og-image.png (1200x630) before launch — referenced below but not yet created.
+// TODO: swap /logo.png for a real 1200x630 og-image before launch — the
+// square logo works as a stopgap but a proper OG image reads much better
+// in link previews (Slack, Twitter, iMessage, etc.).
 const SITE_TITLE = "AirToolkit — 39 Dev Tools, Zero Network Calls";
 const SITE_DESCRIPTION =
   "An offline-first developer toolbox for air-gapped and locked-down Windows machines. No telemetry, no auto-update, no phone-home — ever.";
@@ -27,13 +29,13 @@ export const metadata: Metadata = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     type: "website",
-    images: ["/og-image.png"],
+    images: ["/logo.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ["/og-image.png"],
+    images: ["/logo.png"],
   },
 };
 

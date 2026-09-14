@@ -16,6 +16,9 @@ export default function Footer() {
           <Link href="/faq" className="hover:text-text transition-colors">
             faq
           </Link>
+          <Link href="/about" className="hover:text-text transition-colors">
+            about
+          </Link>
           <a
             href="https://github.com/Ayoub-EDAHLOULI/AirToolkit"
             target="_blank"

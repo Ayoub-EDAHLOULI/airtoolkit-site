@@ -19,11 +19,8 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            {/* Points at the repo until a GitHub Release is published — swap to the release asset URL then. */}
             <a
-              href="https://github.com/Ayoub-EDAHLOULI/AirToolkit"
-              target="_blank"
-              rel="noreferrer"
+              href="https://github.com/Ayoub-EDAHLOULI/AirToolkit/releases/download/v0.1.0/airtoolkit_0.1.0_x64-setup.exe"
               className="bg-primary px-5 py-2.5 font-mono text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"
             >
               download for windows
@@ -37,6 +34,17 @@ export default function Hero() {
               view on github
             </a>
           </div>
+
+          <p className="mt-4 font-mono text-xs text-muted">
+            deploying via Group Policy or SCCM?{" "}
+            <a
+              href="https://github.com/Ayoub-EDAHLOULI/AirToolkit/releases/download/v0.1.0/airtoolkit_0.1.0_x64_en-US.msi"
+              className="text-subtext underline underline-offset-2 transition-colors hover:text-primary"
+            >
+              grab the .msi
+            </a>{" "}
+            instead
+          </p>
         </div>
 
         <div

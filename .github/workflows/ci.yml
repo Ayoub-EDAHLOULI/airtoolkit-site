@@ -1,0 +1,25 @@
+# Gate: lint, typecheck, and build must pass on every push and PR. Deploy to
+# the VPS is manual (git pull + docker compose up -d --build on the server) —
+# this workflow does not touch production.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run build

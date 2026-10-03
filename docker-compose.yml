@@ -1,0 +1,16 @@
+services:
+  airtoolkit:
+    build: .
+    container_name: airtoolkit
+    restart: unless-stopped
+    expose:
+      - "3000"
+    networks:
+      - proxy
+
+networks:
+  # External network shared with the host's reverse proxy (nginx/Caddy
+  # container or another compose project). Create it once with:
+  #   docker network create proxy
+  proxy:
+    external: true

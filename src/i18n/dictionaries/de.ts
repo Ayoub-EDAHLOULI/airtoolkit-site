@@ -18,6 +18,15 @@ const dict: Dictionary = {
     aboutDescription:
       "Warum AirToolkit existiert: entwickelt von einem Sicherheitsingenieur, der Offline-Entwicklertools für gesperrte VMs brauchte und keine fand, die es wirklich waren.",
   },
+  boot: {
+    lines: [
+      "$ airtoolkit wird initialisiert...",
+      "$ Netzwerkschnittstellen werden geprüft... keine erforderlich",
+      "$ 39 Tools werden lokal geladen",
+      "$ null Netzwerkaufrufe erkannt ✓",
+    ],
+    ready: "bereit.",
+  },
   nav: {
     tools: "tools",
     security: "sicherheit",

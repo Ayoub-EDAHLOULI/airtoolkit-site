@@ -112,3 +112,8 @@ body {
     transform: none !important;
   }
 }
+
+/* Hides the site behind the boot screen on first paint; see BootScreen.tsx */
+html[data-booting] [data-boot-target] {
+  visibility: hidden;
+}

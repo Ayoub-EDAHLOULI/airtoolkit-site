@@ -18,6 +18,15 @@ const dict: Dictionary = {
     aboutDescription:
       "Why AirToolkit exists: built by a security engineer who needed offline dev tools for locked-down VMs, and couldn't find any that actually were.",
   },
+  boot: {
+    lines: [
+      "$ initializing airtoolkit...",
+      "$ checking network interfaces... none required",
+      "$ loading 39 tools locally",
+      "$ zero network calls detected ✓",
+    ],
+    ready: "ready.",
+  },
   nav: {
     tools: "tools",
     security: "security",

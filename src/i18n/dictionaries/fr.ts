@@ -18,6 +18,15 @@ const dict: Dictionary = {
     aboutDescription:
       "Pourquoi AirToolkit existe : conçu par un ingénieur sécurité qui avait besoin d'outils dev hors ligne pour des VM verrouillées, et qui n'en a trouvé aucun qui le soit vraiment.",
   },
+  boot: {
+    lines: [
+      "$ initialisation d'airtoolkit...",
+      "$ vérification des interfaces réseau... aucune requise",
+      "$ chargement de 39 outils en local",
+      "$ zéro appel réseau détecté ✓",
+    ],
+    ready: "prêt.",
+  },
   nav: {
     tools: "outils",
     security: "sécurité",

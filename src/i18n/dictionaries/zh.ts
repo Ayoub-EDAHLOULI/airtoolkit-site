@@ -17,6 +17,15 @@ const dict: Dictionary = {
     aboutDescription:
       "AirToolkit 为何存在：由一位安全工程师打造，他需要能在受限虚拟机上使用的离线开发工具，却找不到真正做到离线的工具。",
   },
+  boot: {
+    lines: [
+      "$ 正在初始化 airtoolkit...",
+      "$ 正在检查网络接口... 无需联网",
+      "$ 正在本地加载 39 款工具",
+      "$ 已确认零网络请求 ✓",
+    ],
+    ready: "就绪。",
+  },
   nav: {
     tools: "工具",
     security: "安全",

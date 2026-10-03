@@ -16,6 +16,10 @@ export interface Dictionary {
     aboutTitle: string;
     aboutDescription: string;
   };
+  boot: {
+    lines: string[];
+    ready: string;
+  };
   nav: {
     tools: string;
     security: string;

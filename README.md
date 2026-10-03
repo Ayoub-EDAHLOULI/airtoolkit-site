@@ -10,24 +10,13 @@ Localized into English (default), French, Spanish, German, Arabic (RTL), and Chi
 npm install
 npm run dev        # local development server
 npm run lint       # ESLint
-npm run typecheck  # TypeScript, no emit
-npm run build      # production build (.next/standalone)
+npm run build      # production build (typechecks as part of the build)
 npm start          # run the production build locally
 ```
 
-## Deploy
+## Website
 
-Runs as a Docker container behind nginx on a self-hosted VPS (not a static export — `src/proxy.ts` needs a Node server to redirect `/` to the detected locale).
-
-```bash
-docker compose up -d --build
-```
-
-- `Dockerfile` — multi-stage build producing a minimal `output: "standalone"` image (see `next.config.ts`), listening on port 3000.
-- `docker-compose.yml` — builds and runs the container on an external `proxy` Docker network, expected to be shared with the host's reverse proxy.
-- `deploy/nginx.conf` — reference nginx server block for `airtoolkit.ayoubedahlouli.com`; copy it into the VPS's nginx config and provision TLS with certbot.
-
-Every push to `main` and every PR runs lint, typecheck, and build in CI (`.github/workflows/ci.yml`); it does not deploy. Deploying is manual: `git pull && docker compose up -d --build` on the VPS. Node version: `.nvmrc`.
+https://airtoolkit.ayoubedahlouli.com
 
 ## License
 

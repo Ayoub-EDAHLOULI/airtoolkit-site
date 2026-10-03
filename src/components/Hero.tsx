@@ -23,7 +23,7 @@ export default function Hero({ dict }: { dict: Dictionary }) {
               {t.downloadWindows}
             </a>
             <a
-              href="https://github.com/Ayoub-EDAHLOULI/AirToolkit"
+              href="https://github.com/Ayoub-EDAHLOULI/AirToolkit/releases/tag/v0.1.0"
               target="_blank"
               rel="noreferrer"
               className="border border-border px-5 py-2.5 font-mono text-sm font-semibold text-text transition-colors hover:border-border-strong hover:bg-surface"

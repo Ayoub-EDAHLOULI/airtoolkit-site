@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -65,7 +66,9 @@ export default async function LangLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <script
+        <Script
+          id="boot-guard"
+          strategy="beforeInteractive"
           // Runs before paint so the first frame never flashes the site
           // behind the boot screen — kept in sync with BootScreen's own key.
           dangerouslySetInnerHTML={{

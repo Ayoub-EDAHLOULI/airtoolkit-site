@@ -44,7 +44,7 @@ const dict: Dictionary = {
     title: "39 Entwickler-Tools. Null Netzwerkaufrufe.",
     body: "AirToolkit bündelt die Werkzeuge, die Sie täglich brauchen — JSON-Formatierung, Regex-Tests, Hashing, JWT-Dekodierung und mehr — in einer einzigen Desktop-Anwendung, die von sich aus niemals einen Netzwerkaufruf tätigt. Keine Telemetrie, keine automatischen Updates, niemals nach Hause telefonieren.",
     downloadWindows: "für windows herunterladen",
-    viewGithub: "auf github ansehen",
+    viewGithub: "release notes",
     deployNote: "Bereitstellung über Group Policy oder SCCM?",
     grabMsi: "die .msi holen",
     msiSuffix: "stattdessen",

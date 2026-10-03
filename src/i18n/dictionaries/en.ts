@@ -44,7 +44,7 @@ const dict: Dictionary = {
     title: "39 dev tools. Zero network calls.",
     body: "AirToolkit bundles the utilities you reach for daily — JSON formatting, regex testing, hashing, JWT decoding, and more — into one desktop app that never makes a network call on its own. No telemetry, no auto-update, no phone-home. Ever.",
     downloadWindows: "download for windows",
-    viewGithub: "view on github",
+    viewGithub: "release notes",
     deployNote: "deploying via Group Policy or SCCM?",
     grabMsi: "grab the .msi",
     msiSuffix: "instead",

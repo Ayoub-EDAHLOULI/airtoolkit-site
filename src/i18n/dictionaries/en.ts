@@ -2,12 +2,12 @@ import type { Dictionary } from "../types";
 
 const dict: Dictionary = {
   meta: {
-    siteTitle: "AirToolkit — 39 Dev Tools, Zero Network Calls",
+    siteTitle: "AirToolkit — 38 Dev Tools, Zero Network Calls",
     siteDescription:
       "An offline-first developer toolbox for air-gapped and locked-down Windows machines. No telemetry, no auto-update, no phone-home — ever.",
     toolsTitle: "Tools — AirToolkit",
     toolsDescription:
-      "Browse all 39 tools included in AirToolkit, from JSON formatting to certificate generation, organized by category.",
+      "Browse all 38 tools included in AirToolkit, from JSON formatting to certificate generation, organized by category.",
     securityTitle: "Security & Verification — AirToolkit",
     securityDescription:
       "How AirToolkit's zero-network-calls claim is checked: a static code audit and an OS-level firewall/VM test, both reproducible yourself.",
@@ -22,7 +22,7 @@ const dict: Dictionary = {
     lines: [
       "$ initializing airtoolkit...",
       "$ checking network interfaces... none required",
-      "$ loading 39 tools locally",
+      "$ loading 38 tools locally",
       "$ zero network calls detected ✓",
     ],
     ready: "ready.",
@@ -41,7 +41,7 @@ const dict: Dictionary = {
   },
   hero: {
     badge: "no telemetry · no auto-update · no network calls",
-    title: "39 dev tools. Zero network calls.",
+    title: "38 dev tools. Zero network calls.",
     body: "AirToolkit bundles the utilities you reach for daily — JSON formatting, regex testing, hashing, JWT decoding, and more — into one desktop app that never makes a network call on its own. No telemetry, no auto-update, no phone-home. Ever.",
     downloadWindows: "download for windows",
     viewGithub: "release notes",
@@ -82,7 +82,7 @@ const dict: Dictionary = {
       },
       {
         title: "Pick a tool from the sidebar",
-        body: "39 tools organized into five categories, with search. Everything runs locally in the same window.",
+        body: "38 tools organized into five categories, with search. Everything runs locally in the same window.",
       },
       {
         title: "Verify it yourself",
@@ -92,7 +92,7 @@ const dict: Dictionary = {
     browseTools: "→ browse all tools",
   },
   toolsShowcase: {
-    heading: "39 tools, one app",
+    heading: "38 tools, one app",
     subheading:
       "Everything runs locally, in the same window, with no per-tool setup. Search the sidebar in the app, or browse by category here.",
     categories: {
@@ -335,7 +335,7 @@ const dict: Dictionary = {
     paragraphs: [
       "I'm Ayoub, a software engineer working on security and access-control systems for a B2B company. Part of that job means spending a lot of time inside internet-restricted VMs — machines deliberately cut off from the outside world, because that's the whole point of the systems running on them.",
       "The problem is that most developer tools assume you're never more than one tab away from the internet. Need to format some JSON, test a regex, decode a JWT? On a normal machine, that's a search away. On a locked-down VM, it's not — and the \"offline\" tool sites that claim to work anyway often still ship analytics or font CDNs that fail loudly, or quietly phone home, the moment they're blocked.",
-      "I kept solving this the same way: install a real desktop app, once, and never think about the network again. AirToolkit is that app, built properly instead of improvised each time — 39 tools that cover the everyday utility work, running fully local, with the zero-network-calls guarantee treated as a real engineering constraint rather than a tagline.",
+      "I kept solving this the same way: install a real desktop app, once, and never think about the network again. AirToolkit is that app, built properly instead of improvised each time — 38 tools that cover the everyday utility work, running fully local, with the zero-network-calls guarantee treated as a real engineering constraint rather than a tagline.",
       "It's also the same instinct behind NeuroKey, an offline password manager I built earlier — no cloud, no server in the middle, your data never leaves your device. AirToolkit is that same principle applied to the tools developers reach for every day.",
     ],
     neuroKeyName: "NeuroKey",

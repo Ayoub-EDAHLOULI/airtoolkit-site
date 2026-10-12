@@ -2,12 +2,12 @@ import type { Dictionary } from "../types";
 
 const dict: Dictionary = {
   meta: {
-    siteTitle: "AirToolkit — 39 outils dev, zéro appel réseau",
+    siteTitle: "AirToolkit — 38 outils dev, zéro appel réseau",
     siteDescription:
       "Une boîte à outils pour développeurs entièrement hors ligne, conçue pour les machines Windows isolées ou verrouillées. Pas de télémétrie, pas de mise à jour automatique, jamais de connexion au serveur.",
     toolsTitle: "Outils — AirToolkit",
     toolsDescription:
-      "Parcourez les 39 outils inclus dans AirToolkit, du formatage JSON à la génération de certificats, classés par catégorie.",
+      "Parcourez les 38 outils inclus dans AirToolkit, du formatage JSON à la génération de certificats, classés par catégorie.",
     securityTitle: "Sécurité et vérification — AirToolkit",
     securityDescription:
       "Comment la promesse « zéro appel réseau » d'AirToolkit est vérifiée : un audit statique du code et un test pare-feu/VM au niveau du système, tous deux reproductibles par vous-même.",
@@ -22,7 +22,7 @@ const dict: Dictionary = {
     lines: [
       "$ initialisation d'airtoolkit...",
       "$ vérification des interfaces réseau... aucune requise",
-      "$ chargement de 39 outils en local",
+      "$ chargement de 38 outils en local",
       "$ zéro appel réseau détecté ✓",
     ],
     ready: "prêt.",
@@ -41,7 +41,7 @@ const dict: Dictionary = {
   },
   hero: {
     badge: "aucune télémétrie · aucune mise à jour auto · aucun appel réseau",
-    title: "39 outils dev. Zéro appel réseau.",
+    title: "38 outils dev. Zéro appel réseau.",
     body: "AirToolkit regroupe les utilitaires que vous utilisez au quotidien — formatage JSON, test de regex, hachage, décodage JWT, et bien plus — dans une seule application de bureau qui ne fait jamais d'appel réseau de son propre chef. Pas de télémétrie, pas de mise à jour automatique, jamais de connexion au serveur.",
     downloadWindows: "télécharger pour windows",
     viewGithub: "notes de version",
@@ -82,7 +82,7 @@ const dict: Dictionary = {
       },
       {
         title: "Choisissez un outil dans la barre latérale",
-        body: "39 outils répartis en cinq catégories, avec recherche. Tout s'exécute localement dans la même fenêtre.",
+        body: "38 outils répartis en cinq catégories, avec recherche. Tout s'exécute localement dans la même fenêtre.",
       },
       {
         title: "Vérifiez-le vous-même",
@@ -92,7 +92,7 @@ const dict: Dictionary = {
     browseTools: "→ parcourir tous les outils",
   },
   toolsShowcase: {
-    heading: "39 outils, une seule application",
+    heading: "38 outils, une seule application",
     subheading:
       "Tout s'exécute localement, dans la même fenêtre, sans configuration par outil. Utilisez la recherche dans la barre latérale de l'application, ou parcourez par catégorie ici.",
     categories: {
@@ -336,7 +336,7 @@ const dict: Dictionary = {
     paragraphs: [
       "Je m'appelle Ayoub, ingénieur logiciel travaillant sur des systèmes de sécurité et de contrôle d'accès pour une entreprise B2B. Une partie de ce travail consiste à passer beaucoup de temps dans des VM à accès Internet restreint — des machines délibérément coupées du monde extérieur, car c'est tout l'intérêt des systèmes qui y tournent.",
       "Le problème, c'est que la plupart des outils de développement supposent que vous n'êtes jamais qu'à un onglet d'Internet. Besoin de formater du JSON, tester une regex, décoder un JWT ? Sur une machine normale, c'est à une recherche près. Sur une VM verrouillée, ce n'est pas le cas — et les sites d'outils « hors ligne » qui prétendent fonctionner quand même chargent souvent encore des analytics ou des polices via CDN qui échouent bruyamment, ou se connectent silencieusement, dès qu'ils sont bloqués.",
-      "J'ai toujours résolu ce problème de la même manière : installer une vraie application de bureau, une fois, et ne plus jamais penser au réseau. AirToolkit est cette application, construite proprement plutôt qu'improvisée à chaque fois — 39 outils qui couvrent le travail utilitaire quotidien, fonctionnant entièrement en local, avec la garantie zéro appel réseau traitée comme une véritable contrainte d'ingénierie plutôt qu'un slogan.",
+      "J'ai toujours résolu ce problème de la même manière : installer une vraie application de bureau, une fois, et ne plus jamais penser au réseau. AirToolkit est cette application, construite proprement plutôt qu'improvisée à chaque fois — 38 outils qui couvrent le travail utilitaire quotidien, fonctionnant entièrement en local, avec la garantie zéro appel réseau traitée comme une véritable contrainte d'ingénierie plutôt qu'un slogan.",
       "C'est aussi le même instinct derrière NeuroKey, un gestionnaire de mots de passe hors ligne que j'ai créé auparavant — pas de cloud, pas de serveur intermédiaire, vos données ne quittent jamais votre appareil. AirToolkit applique ce même principe aux outils que les développeurs utilisent chaque jour.",
     ],
     neuroKeyName: "NeuroKey",

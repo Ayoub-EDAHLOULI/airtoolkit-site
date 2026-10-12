@@ -2,12 +2,12 @@ import type { Dictionary } from "../types";
 
 const dict: Dictionary = {
   meta: {
-    siteTitle: "AirToolkit — 39 Entwickler-Tools, null Netzwerkaufrufe",
+    siteTitle: "AirToolkit — 38 Entwickler-Tools, null Netzwerkaufrufe",
     siteDescription:
       "Eine Offline-First-Toolbox für Entwickler auf isolierten und gesperrten Windows-Rechnern. Keine Telemetrie, keine automatischen Updates, niemals nach Hause telefonieren.",
     toolsTitle: "Tools — AirToolkit",
     toolsDescription:
-      "Durchsuchen Sie alle 39 in AirToolkit enthaltenen Tools, von JSON-Formatierung bis Zertifikatserstellung, nach Kategorie geordnet.",
+      "Durchsuchen Sie alle 38 in AirToolkit enthaltenen Tools, von JSON-Formatierung bis Zertifikatserstellung, nach Kategorie geordnet.",
     securityTitle: "Sicherheit & Verifizierung — AirToolkit",
     securityDescription:
       "Wie die Behauptung von AirToolkit über null Netzwerkaufrufe überprüft wird: ein statisches Code-Audit und ein Firewall-/VM-Test auf Betriebssystemebene, beide selbst reproduzierbar.",
@@ -22,7 +22,7 @@ const dict: Dictionary = {
     lines: [
       "$ airtoolkit wird initialisiert...",
       "$ Netzwerkschnittstellen werden geprüft... keine erforderlich",
-      "$ 39 Tools werden lokal geladen",
+      "$ 38 Tools werden lokal geladen",
       "$ null Netzwerkaufrufe erkannt ✓",
     ],
     ready: "bereit.",
@@ -41,7 +41,7 @@ const dict: Dictionary = {
   },
   hero: {
     badge: "keine Telemetrie · keine Auto-Updates · keine Netzwerkaufrufe",
-    title: "39 Entwickler-Tools. Null Netzwerkaufrufe.",
+    title: "38 Entwickler-Tools. Null Netzwerkaufrufe.",
     body: "AirToolkit bündelt die Werkzeuge, die Sie täglich brauchen — JSON-Formatierung, Regex-Tests, Hashing, JWT-Dekodierung und mehr — in einer einzigen Desktop-Anwendung, die von sich aus niemals einen Netzwerkaufruf tätigt. Keine Telemetrie, keine automatischen Updates, niemals nach Hause telefonieren.",
     downloadWindows: "für windows herunterladen",
     viewGithub: "release notes",
@@ -82,7 +82,7 @@ const dict: Dictionary = {
       },
       {
         title: "Ein Tool aus der Seitenleiste wählen",
-        body: "39 Tools in fünf Kategorien organisiert, mit Suche. Alles läuft lokal im selben Fenster.",
+        body: "38 Tools in fünf Kategorien organisiert, mit Suche. Alles läuft lokal im selben Fenster.",
       },
       {
         title: "Selbst überprüfen",
@@ -92,7 +92,7 @@ const dict: Dictionary = {
     browseTools: "→ alle Tools durchsuchen",
   },
   toolsShowcase: {
-    heading: "39 Tools, eine App",
+    heading: "38 Tools, eine App",
     subheading:
       "Alles läuft lokal, im selben Fenster, ohne Einrichtung pro Tool. Nutzen Sie die Suche in der Seitenleiste der App oder durchsuchen Sie hier nach Kategorie.",
     categories: {
@@ -336,7 +336,7 @@ const dict: Dictionary = {
     paragraphs: [
       "Ich bin Ayoub, Softwareingenieur, der an Sicherheits- und Zugangskontrollsystemen für ein B2B-Unternehmen arbeitet. Ein Teil dieser Arbeit bedeutet, viel Zeit in VMs mit eingeschränktem Internetzugang zu verbringen — Rechner, die absichtlich von der Außenwelt abgeschnitten sind, weil genau das der Sinn der darauf laufenden Systeme ist.",
       "Das Problem ist, dass die meisten Entwicklertools davon ausgehen, dass man nie mehr als einen Tab vom Internet entfernt ist. Müssen Sie JSON formatieren, eine Regex testen, ein JWT dekodieren? Auf einem normalen Rechner ist das eine Suche entfernt. Auf einer gesperrten VM ist es das nicht — und die „Offline“-Tool-Seiten, die trotzdem funktionieren wollen, laden oft weiterhin Analytics oder Font-CDNs, die lautstark fehlschlagen oder still nach Hause telefonieren, sobald sie blockiert werden.",
-      "Ich habe das immer auf dieselbe Weise gelöst: eine echte Desktop-Anwendung einmal installieren und nie wieder ans Netzwerk denken. AirToolkit ist diese Anwendung, sauber gebaut statt jedes Mal improvisiert — 39 Tools, die die alltägliche Utility-Arbeit abdecken, vollständig lokal laufend, wobei die Garantie „null Netzwerkaufrufe“ als echte technische Anforderung behandelt wird, nicht als Slogan.",
+      "Ich habe das immer auf dieselbe Weise gelöst: eine echte Desktop-Anwendung einmal installieren und nie wieder ans Netzwerk denken. AirToolkit ist diese Anwendung, sauber gebaut statt jedes Mal improvisiert — 38 Tools, die die alltägliche Utility-Arbeit abdecken, vollständig lokal laufend, wobei die Garantie „null Netzwerkaufrufe“ als echte technische Anforderung behandelt wird, nicht als Slogan.",
       "Es ist auch derselbe Instinkt hinter NeuroKey, einem Offline-Passwort-Manager, den ich zuvor gebaut habe — keine Cloud, kein Server dazwischen, Ihre Daten verlassen nie Ihr Gerät. AirToolkit wendet dasselbe Prinzip auf die Tools an, die Entwickler jeden Tag nutzen.",
     ],
     neuroKeyName: "NeuroKey",

@@ -2,12 +2,12 @@ import type { Dictionary } from "../types";
 
 const dict: Dictionary = {
   meta: {
-    siteTitle: "AirToolkit — 39 herramientas dev, cero llamadas de red",
+    siteTitle: "AirToolkit — 38 herramientas dev, cero llamadas de red",
     siteDescription:
       "Una caja de herramientas para desarrolladores totalmente sin conexión, pensada para máquinas Windows aisladas o bloqueadas. Sin telemetría, sin actualizaciones automáticas, sin conexión a servidores, nunca.",
     toolsTitle: "Herramientas — AirToolkit",
     toolsDescription:
-      "Explora las 39 herramientas incluidas en AirToolkit, desde el formateo de JSON hasta la generación de certificados, organizadas por categoría.",
+      "Explora las 38 herramientas incluidas en AirToolkit, desde el formateo de JSON hasta la generación de certificados, organizadas por categoría.",
     securityTitle: "Seguridad y verificación — AirToolkit",
     securityDescription:
       "Cómo se comprueba la afirmación de cero llamadas de red de AirToolkit: una auditoría estática del código y una prueba de firewall/VM a nivel de sistema operativo, ambas reproducibles por ti mismo.",
@@ -22,7 +22,7 @@ const dict: Dictionary = {
     lines: [
       "$ inicializando airtoolkit...",
       "$ comprobando interfaces de red... ninguna requerida",
-      "$ cargando 39 herramientas localmente",
+      "$ cargando 38 herramientas localmente",
       "$ cero llamadas de red detectadas ✓",
     ],
     ready: "listo.",
@@ -41,7 +41,7 @@ const dict: Dictionary = {
   },
   hero: {
     badge: "sin telemetría · sin actualizaciones automáticas · sin llamadas de red",
-    title: "39 herramientas dev. Cero llamadas de red.",
+    title: "38 herramientas dev. Cero llamadas de red.",
     body: "AirToolkit reúne las utilidades que usas a diario — formateo de JSON, pruebas de regex, hashing, decodificación de JWT y más — en una sola aplicación de escritorio que nunca hace llamadas de red por su cuenta. Sin telemetría, sin actualizaciones automáticas, sin conexión a servidores. Nunca.",
     downloadWindows: "descargar para windows",
     viewGithub: "notas de la versión",
@@ -82,7 +82,7 @@ const dict: Dictionary = {
       },
       {
         title: "Elige una herramienta en la barra lateral",
-        body: "39 herramientas organizadas en cinco categorías, con búsqueda. Todo se ejecuta localmente en la misma ventana.",
+        body: "38 herramientas organizadas en cinco categorías, con búsqueda. Todo se ejecuta localmente en la misma ventana.",
       },
       {
         title: "Verifícalo tú mismo",
@@ -92,7 +92,7 @@ const dict: Dictionary = {
     browseTools: "→ explorar todas las herramientas",
   },
   toolsShowcase: {
-    heading: "39 herramientas, una sola app",
+    heading: "38 herramientas, una sola app",
     subheading:
       "Todo se ejecuta localmente, en la misma ventana, sin configuración por herramienta. Busca en la barra lateral de la app, o explora por categoría aquí.",
     categories: {
@@ -336,7 +336,7 @@ const dict: Dictionary = {
     paragraphs: [
       "Soy Ayoub, ingeniero de software que trabaja en sistemas de seguridad y control de acceso para una empresa B2B. Parte de ese trabajo implica pasar mucho tiempo dentro de VM con acceso a Internet restringido — máquinas deliberadamente aisladas del mundo exterior, porque ese es precisamente el propósito de los sistemas que se ejecutan en ellas.",
       "El problema es que la mayoría de las herramientas de desarrollo asumen que nunca estás a más de una pestaña de Internet. ¿Necesitas formatear JSON, probar una regex, decodificar un JWT? En una máquina normal, es cuestión de una búsqueda. En una VM bloqueada, no lo es — y los sitios de herramientas \"sin conexión\" que afirman funcionar de todos modos a menudo siguen cargando analíticas o CDN de fuentes que fallan ruidosamente, o se conectan en silencio, en cuanto se bloquean.",
-      "Seguí resolviendo esto de la misma manera: instalar una aplicación de escritorio real, una vez, y no volver a pensar en la red. AirToolkit es esa aplicación, construida correctamente en lugar de improvisada cada vez — 39 herramientas que cubren el trabajo utilitario diario, funcionando completamente en local, con la garantía de cero llamadas de red tratada como una restricción de ingeniería real en lugar de un eslogan.",
+      "Seguí resolviendo esto de la misma manera: instalar una aplicación de escritorio real, una vez, y no volver a pensar en la red. AirToolkit es esa aplicación, construida correctamente en lugar de improvisada cada vez — 38 herramientas que cubren el trabajo utilitario diario, funcionando completamente en local, con la garantía de cero llamadas de red tratada como una restricción de ingeniería real en lugar de un eslogan.",
       "Es también el mismo instinto detrás de NeuroKey, un gestor de contraseñas sin conexión que construí anteriormente — sin nube, sin servidor intermedio, tus datos nunca salen de tu dispositivo. AirToolkit aplica ese mismo principio a las herramientas que los desarrolladores usan cada día.",
     ],
     neuroKeyName: "NeuroKey",

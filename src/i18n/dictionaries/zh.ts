@@ -16,6 +16,9 @@ const dict: Dictionary = {
     aboutTitle: "关于我们 — AirToolkit",
     aboutDescription:
       "AirToolkit 为何存在：由一位安全工程师打造，他需要能在受限虚拟机上使用的离线开发工具，却找不到真正做到离线的工具。",
+    privacyTitle: "隐私政策 — AirToolkit",
+    privacyDescription:
+      "AirToolkit 不收集任何个人信息：没有账户、没有遥测、没有分析。哪些数据留在你的设备上，以及少数会传输数据的情况。",
   },
   boot: {
     lines: [
@@ -37,6 +40,7 @@ const dict: Dictionary = {
   },
   footer: {
     github: "github",
+    privacy: "隐私",
   },
   hero: {
     badge: "无遥测 · 无自动更新 · 无网络请求",
@@ -323,6 +327,44 @@ const dict: Dictionary = {
     knowMore: "了解更多",
     aboutDeveloper: "关于开发者 →",
     sourceGithub: "github 源代码 →",
+  },
+  privacy: {
+    tag: "# 隐私",
+    heading: "隐私政策",
+    updated: "最后更新：2026 年 11 月 19 日",
+    intro: "AirToolkit 不收集、不存储，也不传输任何个人信息。没有账户、没有遥测、没有分析、没有崩溃报告，也没有自动更新。本页说明哪些数据留在你的设备上，以及少数会传输数据的情况。",
+    sections: [
+      {
+        title: "应用保存的内容",
+        body: "AirToolkit 只在你的电脑上保存两样东西：你选择的浅色/深色主题，以及你在 Scratchpad 中输入的文本。两者都保存在本地，绝不会离开你的设备。对于 Microsoft Store 版本，卸载应用会将其删除。",
+      },
+      {
+        title: "你的文件",
+        body: "AirToolkit 只读取你亲自打开的文件，也只把文件写到你选择保存的位置。文件内容在你的设备上处理，绝不会被上传。",
+      },
+      {
+        title: "网络访问",
+        body: "AirToolkit 不会主动发起任何网络请求。唯一的例外是 API Request Tester：当你点击发送时，它会把你编写的请求原样发送到你输入的地址。该请求直接从你的电脑发往该地址，绝不会发送给我们或任何第三方。",
+      },
+      {
+        title: "Microsoft Store",
+        body: "如果你从 Microsoft Store 安装 AirToolkit，下载和许可由 Microsoft 按照《Microsoft 隐私声明》处理。Microsoft 可能会向我们提供汇总的匿名统计数据，例如安装次数或崩溃次数，我们无法据此识别你的身份。",
+      },
+      {
+        title: "本网站",
+        body: "本网站没有任何分析、跟踪或广告，字体也由本站自行提供。它只会用一个 cookie 保存你选择的语言，并用一个临时标记避免在你访问期间重复播放开场动画。与任何 Web 服务器一样，我们的服务器可能会保留常规技术日志（例如 IP 地址和请求的页面），用于安全和网站运行。",
+      },
+      {
+        title: "儿童",
+        body: "AirToolkit 不收集任何人的个人信息，包括 13 岁以下的儿童。",
+      },
+      {
+        title: "变更",
+        body: "如果本政策发生变更，新版本将发布在本页面，并更新日期。",
+      },
+    ],
+    contactLead: "对隐私有疑问？",
+    contactLink: "在 github 上提交 issue →",
   },
 };
 

@@ -27,6 +27,9 @@ export default function Footer({
           <Link href={`/${lang}/about`} className="hover:text-text transition-colors">
             {dict.nav.about}
           </Link>
+          <Link href={`/${lang}/privacy`} className="hover:text-text transition-colors">
+            {dict.footer.privacy}
+          </Link>
           <a
             href="https://github.com/Ayoub-EDAHLOULI/AirToolkit"
             target="_blank"

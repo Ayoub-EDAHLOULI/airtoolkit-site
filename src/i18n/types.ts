@@ -15,6 +15,8 @@ export interface Dictionary {
     faqDescription: string;
     aboutTitle: string;
     aboutDescription: string;
+    privacyTitle: string;
+    privacyDescription: string;
   };
   boot: {
     lines: string[];
@@ -31,6 +33,7 @@ export interface Dictionary {
   };
   footer: {
     github: string;
+    privacy: string;
   };
   hero: {
     badge: string;
@@ -83,5 +86,14 @@ export interface Dictionary {
     knowMore: string;
     aboutDeveloper: string;
     sourceGithub: string;
+  };
+  privacy: {
+    tag: string;
+    heading: string;
+    updated: string;
+    intro: string;
+    sections: { title: string; body: string }[];
+    contactLead: string;
+    contactLink: string;
   };
 }

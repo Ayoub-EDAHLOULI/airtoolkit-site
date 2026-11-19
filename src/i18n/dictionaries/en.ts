@@ -17,6 +17,9 @@ const dict: Dictionary = {
     aboutTitle: "About — AirToolkit",
     aboutDescription:
       "Why AirToolkit exists: built by a security engineer who needed offline dev tools for locked-down VMs, and couldn't find any that actually were.",
+    privacyTitle: "Privacy Policy — AirToolkit",
+    privacyDescription:
+      "AirToolkit collects no personal information: no accounts, no telemetry, no analytics. What stays on your device, and the few cases where data moves.",
   },
   boot: {
     lines: [
@@ -38,6 +41,7 @@ const dict: Dictionary = {
   },
   footer: {
     github: "github",
+    privacy: "privacy",
   },
   hero: {
     badge: "no telemetry · no auto-update · no network calls",
@@ -342,6 +346,44 @@ const dict: Dictionary = {
     knowMore: "know more",
     aboutDeveloper: "about the developer →",
     sourceGithub: "source on github →",
+  },
+  privacy: {
+    tag: "# privacy",
+    heading: "Privacy policy",
+    updated: "Last updated: November 19, 2026",
+    intro: "AirToolkit does not collect, store, or transmit any personal information. There are no accounts, no telemetry, no analytics, no crash reporting and no auto-update. This page explains exactly what stays on your device, and the few cases where data moves.",
+    sections: [
+      {
+        title: "What the app stores",
+        body: "AirToolkit keeps two things on your computer: your light/dark theme choice and the text you type in the Scratchpad. Both are saved locally by the app and never leave your device. With the Microsoft Store version, uninstalling the app removes them.",
+      },
+      {
+        title: "Your files",
+        body: "AirToolkit only reads files you open yourself, and only writes files where you choose to save them. Their contents are processed on your device and are never uploaded.",
+      },
+      {
+        title: "Network access",
+        body: "AirToolkit makes no network calls of its own. The one exception is the API Request Tester: when you press send, it sends exactly the request you wrote to the address you entered. That request goes directly from your computer to that address; it is never sent to us or anyone else.",
+      },
+      {
+        title: "Microsoft Store",
+        body: "If you install AirToolkit from the Microsoft Store, Microsoft handles the download and licensing under the Microsoft Privacy Statement. Microsoft may share aggregated, anonymous statistics with us, such as install and crash counts. We cannot identify you from them.",
+      },
+      {
+        title: "This website",
+        body: "This website has no analytics, tracking or ads, and its fonts are served from this site. It stores only your language choice in a cookie, and a temporary flag that stops the intro animation from replaying during your visit. Like any web server, ours may keep standard technical logs (such as IP address and pages requested) for security and to keep the site running.",
+      },
+      {
+        title: "Children",
+        body: "AirToolkit collects no personal information from anyone, including children under 13.",
+      },
+      {
+        title: "Changes",
+        body: "If this policy changes, the new version will be posted on this page with an updated date.",
+      },
+    ],
+    contactLead: "Questions about privacy?",
+    contactLink: "open an issue on github →",
   },
 };
 

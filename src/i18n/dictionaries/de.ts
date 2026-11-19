@@ -17,6 +17,9 @@ const dict: Dictionary = {
     aboutTitle: "Über uns — AirToolkit",
     aboutDescription:
       "Warum AirToolkit existiert: entwickelt von einem Sicherheitsingenieur, der Offline-Entwicklertools für gesperrte VMs brauchte und keine fand, die es wirklich waren.",
+    privacyTitle: "Datenschutzerklärung — AirToolkit",
+    privacyDescription:
+      "AirToolkit erhebt keine personenbezogenen Daten: keine Konten, keine Telemetrie, keine Analytics. Was auf Ihrem Gerät bleibt und in welchen wenigen Fällen Daten übertragen werden.",
   },
   boot: {
     lines: [
@@ -38,6 +41,7 @@ const dict: Dictionary = {
   },
   footer: {
     github: "github",
+    privacy: "datenschutz",
   },
   hero: {
     badge: "keine Telemetrie · keine Auto-Updates · keine Netzwerkaufrufe",
@@ -343,6 +347,44 @@ const dict: Dictionary = {
     knowMore: "mehr erfahren",
     aboutDeveloper: "über den Entwickler →",
     sourceGithub: "Quellcode auf github →",
+  },
+  privacy: {
+    tag: "# datenschutz",
+    heading: "Datenschutzerklärung",
+    updated: "Zuletzt aktualisiert: 19. November 2026",
+    intro: "AirToolkit erhebt, speichert und überträgt keinerlei personenbezogene Daten. Es gibt keine Konten, keine Telemetrie, keine Analytics, keine Absturzberichte und keine automatischen Updates. Diese Seite erklärt genau, was auf Ihrem Gerät bleibt und in welchen wenigen Fällen Daten übertragen werden.",
+    sections: [
+      {
+        title: "Was die App speichert",
+        body: "AirToolkit speichert zwei Dinge auf Ihrem Computer: Ihre Wahl zwischen hellem und dunklem Design und den Text, den Sie im Scratchpad eingeben. Beides wird lokal gespeichert und verlässt Ihr Gerät nie. Bei der Microsoft-Store-Version wird beides beim Deinstallieren entfernt.",
+      },
+      {
+        title: "Ihre Dateien",
+        body: "AirToolkit liest nur Dateien, die Sie selbst öffnen, und schreibt Dateien nur dorthin, wo Sie sie speichern. Ihr Inhalt wird auf Ihrem Gerät verarbeitet und nie hochgeladen.",
+      },
+      {
+        title: "Netzwerkzugriff",
+        body: "AirToolkit stellt von sich aus keine Netzwerkverbindungen her. Die einzige Ausnahme ist der API Request Tester: Wenn Sie auf Senden klicken, sendet er genau die Anfrage, die Sie geschrieben haben, an die Adresse, die Sie eingegeben haben. Diese Anfrage geht direkt von Ihrem Computer an diese Adresse; sie wird nie an uns oder an Dritte gesendet.",
+      },
+      {
+        title: "Microsoft Store",
+        body: "Wenn Sie AirToolkit aus dem Microsoft Store installieren, wickelt Microsoft Download und Lizenzierung gemäß der Microsoft-Datenschutzerklärung ab. Microsoft kann uns zusammengefasste, anonyme Statistiken zur Verfügung stellen, etwa Installations- oder Absturzzahlen. Daraus können wir Sie nicht identifizieren.",
+      },
+      {
+        title: "Diese Website",
+        body: "Diese Website verwendet keine Analytics, kein Tracking und keine Werbung, und ihre Schriftarten werden von der Website selbst ausgeliefert. Sie speichert nur Ihre Sprachwahl in einem Cookie sowie einen temporären Hinweis, damit die Startanimation während Ihres Besuchs nicht erneut abgespielt wird. Wie jeder Webserver kann unserer übliche technische Protokolle (etwa IP-Adresse und aufgerufene Seiten) für die Sicherheit und den Betrieb der Website speichern.",
+      },
+      {
+        title: "Kinder",
+        body: "AirToolkit erhebt von niemandem personenbezogene Daten, auch nicht von Kindern unter 13 Jahren.",
+      },
+      {
+        title: "Änderungen",
+        body: "Wenn sich diese Erklärung ändert, wird die neue Fassung mit aktualisiertem Datum auf dieser Seite veröffentlicht.",
+      },
+    ],
+    contactLead: "Fragen zum Datenschutz?",
+    contactLink: "issue auf github eröffnen →",
   },
 };
 

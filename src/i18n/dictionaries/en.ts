@@ -1,4 +1,5 @@
 import type { Dictionary } from "../types";
+import tools from "../tools/en";
 
 const dict: Dictionary = {
   meta: {
@@ -107,177 +108,23 @@ const dict: Dictionary = {
       "Network & Config": "Network & Config",
       "Converters & Media": "Converters & Media",
     },
-    tools: {
-      jsonFormatter: {
-        label: "JSON Formatter",
-        description: "Pretty-print, minify, and validate JSON.",
-      },
-      xmlCsvFormatter: {
-        label: "XML / CSV Formatter",
-        description: "Pretty-print XML and view CSV as a table.",
-      },
-      sqlFormatter: {
-        label: "SQL Formatter",
-        description: "Beautify minified SQL into readable, indented output.",
-      },
-      markdownPreviewer: {
-        label: "Markdown Previewer",
-        description: "Live-rendered Markdown as you type.",
-      },
-      jsonYamlToml: {
-        label: "JSON ↔ YAML / TOML",
-        description: "Convert between JSON, YAML, and TOML.",
-      },
-      regexTester: {
-        label: "Regex Tester",
-        description:
-          "Match highlighting, capture groups, and a pattern cheat sheet.",
-      },
-      diffTool: {
-        label: "Diff Tool",
-        description: "Line-by-line diff between two blocks of text.",
-      },
-      caseConverter: {
-        label: "Case Converter",
-        description: "camelCase, snake_case, kebab-case, and more.",
-      },
-      textUtilities: {
-        label: "Text Utilities",
-        description:
-          "Sort, dedupe, normalize whitespace, count words and lines.",
-      },
-      encodeDecode: {
-        label: "Encode / Decode",
-        description: "Base64, URL encoding, and HTML entities.",
-      },
-      logParserGrep: {
-        label: "Log Parser / Grep",
-        description:
-          "Filter multi-line logs by pattern, with a most-repeated-lines view.",
-      },
-      stringEscapeUnescape: {
-        label: "String Escape / Unescape",
-        description: "JSON, shell, SQL, and regex escaping in one place.",
-      },
-      jsonDiff: {
-        label: "JSON Diff",
-        description:
-          "Structural diff by key/value — ignores reordering and formatting.",
-      },
-      jsonSchemaValidator: {
-        label: "JSON Schema Validator",
-        description: "Validate a JSON document against a JSON Schema.",
-      },
-      scratchpad: {
-        label: "Scratchpad",
-        description:
-          "A local, multi-note notepad that never leaves your machine.",
-      },
-      hashUuidGenerator: {
-        label: "Hash / UUID Generator",
-        description: "MD5, SHA-1/256/512, and UUID v4 generation.",
-      },
-      fakeDataGenerator: {
-        label: "Fake Data Generator",
-        description:
-          "Names, emails, addresses, and more for seeding test data.",
-      },
-      qrCodeGenerator: {
-        label: "QR Code Generator",
-        description: "Text or URL to a QR code, exportable as PNG.",
-      },
-      faviconGenerator: {
-        label: "Favicon Generator",
-        description:
-          "One image in, a full set of favicon sizes and an .ico out.",
-      },
-      jwtDecoder: {
-        label: "JWT Decoder",
-        description: "Inspect header, payload, and signature claims.",
-      },
-      x509CertificateDecoder: {
-        label: "X.509 Certificate Decoder",
-        description:
-          "Issuer, subject, validity, and SANs from a pasted PEM cert.",
-      },
-      passwordStrengthChecker: {
-        label: "Password Strength Checker",
-        description:
-          "Entropy and crack-time estimates, plus a strong-password generator.",
-      },
-      certificateCsrGenerator: {
-        label: "Certificate / CSR Generator",
-        description:
-          "Generate a self-signed cert or CSR — the private key never leaves your device.",
-      },
-      apiRequestTester: {
-        label: "API Request Tester",
-        description:
-          "Compose and send HTTP requests on demand — the one deliberate exception to zero network calls.",
-      },
-      urlParserBuilder: {
-        label: "URL Parser / Builder",
-        description: "Break a URL into fields, or build one from scratch.",
-      },
-      subnetCidrCalculator: {
-        label: "Subnet / CIDR Calculator",
-        description:
-          "Network address, broadcast, and usable host range from an IP + CIDR.",
-      },
-      cronExplainer: {
-        label: "Cron Explainer",
-        description:
-          "Human-readable explanation of a cron expression, plus next run times.",
-      },
-      dotenvDiffValidator: {
-        label: "dotenv Diff & Validator",
-        description:
-          "Compare two .env files for missing, extra, or differing keys.",
-      },
-      networkPortReference: {
-        label: "Network Port Reference",
-        description: "Searchable lookup of common ports and what runs on them.",
-      },
-      curlRequestBuilder: {
-        label: "cURL ↔ Request Builder",
-        description:
-          "Parse a cURL command into its parts, or generate one from a request.",
-      },
-      systemInfo: {
-        label: "System Info",
-        description: "Platform, architecture, hostname, and locale — read locally.",
-      },
-      timestampConverter: {
-        label: "Timestamp Converter",
-        description:
-          "Unix timestamps to dates and back, in seconds or milliseconds.",
-      },
-      numberBaseConverter: {
-        label: "Number Base Converter",
-        description: "Binary, octal, decimal, and hexadecimal conversion.",
-      },
-      colorTools: {
-        label: "Color Tools",
-        description: "HEX, RGB, HSL, and CMYK conversion with a visual picker.",
-      },
-      colorPaletteExtractor: {
-        label: "Color Palette Extractor",
-        description: "Dominant colors from an image via k-means clustering.",
-      },
-      qrCodeReader: {
-        label: "QR Code Reader",
-        description: "Decode a QR code image back to text.",
-      },
-      hexBinaryFileInspector: {
-        label: "Hex / Binary File Inspector",
-        description:
-          "Hex dump and magic-byte file type detection for any file.",
-      },
-      base64FileEncoder: {
-        label: "Base64 File Encoder",
-        description: "Encode any file to base64 or a data URI, and decode back.",
-      },
+    categoryDescriptions: {
+      "Formatters & Text":
+        "Reformat, convert, compare and clean up text and structured data.",
+      "Generators":
+        "Produce hashes, IDs, test data, QR codes and icon sets.",
+      "Security":
+        "Inspect tokens and certificates, and create keys, without pasting secrets into a website.",
+      "Network & Config":
+        "Work with HTTP requests, URLs, subnets, schedules and environment files.",
+      "Converters & Media":
+        "Convert timestamps, numbers and colors, and look inside images and binary files.",
     },
+    jumpTo: "jump to",
+    toolCount: "{n} tools",
+    whyOfflineLabel: "why offline",
+    networkBadge: "uses network · on demand",
+    tools,
   },
   verification: {
     heading: "Verifiable, not just claimed",

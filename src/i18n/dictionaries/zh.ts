@@ -1,4 +1,5 @@
 import type { Dictionary } from "../types";
+import tools from "../tools/zh";
 
 const dict: Dictionary = {
   meta: {
@@ -106,160 +107,23 @@ const dict: Dictionary = {
       "Network & Config": "网络与配置",
       "Converters & Media": "转换与媒体",
     },
-    tools: {
-      jsonFormatter: {
-        label: "JSON 格式化工具",
-        description: "美化、压缩并验证 JSON。",
-      },
-      xmlCsvFormatter: {
-        label: "XML / CSV 格式化工具",
-        description: "美化 XML，并以表格形式查看 CSV。",
-      },
-      sqlFormatter: {
-        label: "SQL 格式化工具",
-        description: "将压缩的 SQL 转换为可读的缩进格式。",
-      },
-      markdownPreviewer: {
-        label: "Markdown 预览器",
-        description: "边输入边实时渲染 Markdown。",
-      },
-      jsonYamlToml: {
-        label: "JSON ↔ YAML / TOML",
-        description: "在 JSON、YAML 和 TOML 之间互相转换。",
-      },
-      regexTester: {
-        label: "正则表达式测试器",
-        description: "匹配高亮、捕获组，以及正则语法速查表。",
-      },
-      diffTool: {
-        label: "文本对比工具",
-        description: "对两段文本进行逐行比较。",
-      },
-      caseConverter: {
-        label: "命名格式转换器",
-        description: "camelCase、snake_case、kebab-case 等多种命名格式。",
-      },
-      textUtilities: {
-        label: "文本实用工具",
-        description: "排序、去重、规范化空白字符，统计字数与行数。",
-      },
-      encodeDecode: {
-        label: "编码 / 解码",
-        description: "Base64、URL 编码以及 HTML 实体。",
-      },
-      logParserGrep: {
-        label: "日志解析 / Grep",
-        description: "按模式过滤多行日志，并查看最常重复的行。",
-      },
-      stringEscapeUnescape: {
-        label: "字符串转义 / 反转义",
-        description: "JSON、Shell、SQL 与正则表达式的转义一站式处理。",
-      },
-      jsonDiff: {
-        label: "JSON 差异对比",
-        description: "按键/值进行结构化对比——忽略顺序与格式差异。",
-      },
-      jsonSchemaValidator: {
-        label: "JSON Schema 校验器",
-        description: "根据 JSON Schema 校验 JSON 文档。",
-      },
-      scratchpad: {
-        label: "便签本",
-        description: "一个永远不会离开你设备的本地多笔记便签本。",
-      },
-      hashUuidGenerator: {
-        label: "哈希 / UUID 生成器",
-        description: "生成 MD5、SHA-1/256/512 以及 UUID v4。",
-      },
-      fakeDataGenerator: {
-        label: "虚拟数据生成器",
-        description: "生成姓名、邮箱、地址等，用于填充测试数据。",
-      },
-      qrCodeGenerator: {
-        label: "二维码生成器",
-        description: "将文本或链接生成二维码，可导出为 PNG。",
-      },
-      faviconGenerator: {
-        label: "网站图标生成器",
-        description: "输入一张图片，输出一整套图标尺寸和 .ico 文件。",
-      },
-      jwtDecoder: {
-        label: "JWT 解码器",
-        description: "查看头部、载荷及签名声明。",
-      },
-      x509CertificateDecoder: {
-        label: "X.509 证书解码器",
-        description: "从粘贴的 PEM 证书中解析颁发者、主体、有效期及 SAN。",
-      },
-      passwordStrengthChecker: {
-        label: "密码强度检测器",
-        description: "熵值与破解耗时估算，附带强密码生成器。",
-      },
-      certificateCsrGenerator: {
-        label: "证书 / CSR 生成器",
-        description: "生成自签名证书或 CSR——私钥绝不会离开你的设备。",
-      },
-      apiRequestTester: {
-        label: "API 请求测试器",
-        description: "按需组装并发送 HTTP 请求——这是零网络请求原则中唯一有意保留的例外。",
-      },
-      urlParserBuilder: {
-        label: "URL 解析 / 构建器",
-        description: "将 URL 拆解为各个字段，或从零构建一个 URL。",
-      },
-      subnetCidrCalculator: {
-        label: "子网 / CIDR 计算器",
-        description: "根据 IP + CIDR 计算网络地址、广播地址及可用主机范围。",
-      },
-      cronExplainer: {
-        label: "Cron 表达式解释器",
-        description: "以易读方式解释 cron 表达式，并给出下次运行时间。",
-      },
-      dotenvDiffValidator: {
-        label: "dotenv 对比与校验器",
-        description: "比较两个 .env 文件，找出缺失、多余或不同的键。",
-      },
-      networkPortReference: {
-        label: "网络端口参考",
-        description: "可搜索的常用端口及其对应服务查询表。",
-      },
-      curlRequestBuilder: {
-        label: "cURL ↔ 请求构建器",
-        description: "将 cURL 命令解析为各个部分，或根据请求生成 cURL 命令。",
-      },
-      systemInfo: {
-        label: "系统信息",
-        description: "平台、架构、主机名与区域设置——均在本地读取。",
-      },
-      timestampConverter: {
-        label: "时间戳转换器",
-        description: "在 Unix 时间戳与日期之间互相转换，支持秒或毫秒。",
-      },
-      numberBaseConverter: {
-        label: "进制转换器",
-        description: "二进制、八进制、十进制与十六进制之间的转换。",
-      },
-      colorTools: {
-        label: "颜色工具",
-        description: "HEX、RGB、HSL 与 CMYK 转换，附带可视化取色器。",
-      },
-      colorPaletteExtractor: {
-        label: "调色板提取器",
-        description: "通过 k-means 聚类从图像中提取主色调。",
-      },
-      qrCodeReader: {
-        label: "二维码读取器",
-        description: "将二维码图像解码回文本。",
-      },
-      hexBinaryFileInspector: {
-        label: "十六进制 / 二进制文件检查器",
-        description: "对任意文件进行十六进制转储及魔数文件类型检测。",
-      },
-      base64FileEncoder: {
-        label: "Base64 文件编码器",
-        description: "将任意文件编码为 Base64 或 data URI，并可解码还原。",
-      },
+    categoryDescriptions: {
+      "Formatters & Text":
+        "格式化、转换、比较和清理文本与结构化数据。",
+      "Generators":
+        "生成哈希、ID、测试数据、二维码和图标集。",
+      "Security":
+        "检查令牌和证书、创建密钥，无需把机密粘贴到网站上。",
+      "Network & Config":
+        "处理 HTTP 请求、URL、子网、定时任务和环境变量文件。",
+      "Converters & Media":
+        "转换时间戳、数字和颜色，查看图片和二进制文件的内部。",
     },
+    jumpTo: "跳转到",
+    toolCount: "{n} 个工具",
+    whyOfflineLabel: "为何离线",
+    networkBadge: "使用网络 · 按需",
+    tools,
   },
   verification: {
     heading: "可验证，而非空口承诺",

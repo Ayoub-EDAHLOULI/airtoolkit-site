@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import ToolsShowcase from "@/components/ToolsShowcase";
+import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export async function generateMetadata({
@@ -15,6 +17,7 @@ export async function generateMetadata({
 
 export default async function ToolsPage({ params }: PageProps<"/[lang]/tools">) {
   const { lang } = await params;
+  if (!isLocale(lang)) notFound();
   const dict = await getDictionary(lang);
-  return <ToolsShowcase dict={dict} />;
+  return <ToolsShowcase lang={lang} dict={dict} />;
 }

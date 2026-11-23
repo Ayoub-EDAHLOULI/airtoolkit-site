@@ -1,4 +1,5 @@
 import type { Dictionary } from "../types";
+import tools from "../tools/fr";
 
 const dict: Dictionary = {
   meta: {
@@ -107,178 +108,23 @@ const dict: Dictionary = {
       "Network & Config": "Réseau et configuration",
       "Converters & Media": "Convertisseurs et médias",
     },
-    tools: {
-      jsonFormatter: {
-        label: "Formateur JSON",
-        description: "Mise en forme, minification et validation de JSON.",
-      },
-      xmlCsvFormatter: {
-        label: "Formateur XML / CSV",
-        description: "Mise en forme de XML et affichage de CSV sous forme de tableau.",
-      },
-      sqlFormatter: {
-        label: "Formateur SQL",
-        description: "Transforme du SQL minifié en sortie lisible et indentée.",
-      },
-      markdownPreviewer: {
-        label: "Aperçu Markdown",
-        description: "Rendu Markdown en direct pendant la saisie.",
-      },
-      jsonYamlToml: {
-        label: "JSON ↔ YAML / TOML",
-        description: "Conversion entre JSON, YAML et TOML.",
-      },
-      regexTester: {
-        label: "Testeur de regex",
-        description:
-          "Surlignage des correspondances, groupes de capture et aide-mémoire des motifs.",
-      },
-      diffTool: {
-        label: "Outil de diff",
-        description: "Comparaison ligne par ligne entre deux blocs de texte.",
-      },
-      caseConverter: {
-        label: "Convertisseur de casse",
-        description: "camelCase, snake_case, kebab-case, et plus encore.",
-      },
-      textUtilities: {
-        label: "Utilitaires texte",
-        description:
-          "Trier, dédupliquer, normaliser les espaces, compter mots et lignes.",
-      },
-      encodeDecode: {
-        label: "Encoder / Décoder",
-        description: "Base64, encodage URL et entités HTML.",
-      },
-      logParserGrep: {
-        label: "Analyseur de logs / Grep",
-        description:
-          "Filtrer des logs multi-lignes par motif, avec une vue des lignes les plus répétées.",
-      },
-      stringEscapeUnescape: {
-        label: "Échappement de chaînes",
-        description: "Échappement JSON, shell, SQL et regex au même endroit.",
-      },
-      jsonDiff: {
-        label: "Diff JSON",
-        description:
-          "Diff structurel par clé/valeur — ignore le réordonnancement et la mise en forme.",
-      },
-      jsonSchemaValidator: {
-        label: "Validateur de schéma JSON",
-        description: "Valider un document JSON par rapport à un schéma JSON.",
-      },
-      scratchpad: {
-        label: "Bloc-notes",
-        description:
-          "Un bloc-notes local multi-notes qui ne quitte jamais votre machine.",
-      },
-      hashUuidGenerator: {
-        label: "Générateur de hash / UUID",
-        description: "Génération MD5, SHA-1/256/512 et UUID v4.",
-      },
-      fakeDataGenerator: {
-        label: "Générateur de fausses données",
-        description:
-          "Noms, e-mails, adresses et plus encore pour alimenter des données de test.",
-      },
-      qrCodeGenerator: {
-        label: "Générateur de QR code",
-        description: "Texte ou URL vers un QR code, exportable en PNG.",
-      },
-      faviconGenerator: {
-        label: "Générateur de favicon",
-        description:
-          "Une image en entrée, un ensemble complet de tailles de favicon et un .ico en sortie.",
-      },
-      jwtDecoder: {
-        label: "Décodeur JWT",
-        description: "Inspecter l'en-tête, la charge utile et les claims de signature.",
-      },
-      x509CertificateDecoder: {
-        label: "Décodeur de certificat X.509",
-        description:
-          "Émetteur, sujet, validité et SAN à partir d'un certificat PEM collé.",
-      },
-      passwordStrengthChecker: {
-        label: "Vérificateur de force de mot de passe",
-        description:
-          "Estimations d'entropie et de temps de cassage, plus un générateur de mots de passe robustes.",
-      },
-      certificateCsrGenerator: {
-        label: "Générateur de certificat / CSR",
-        description:
-          "Générer un certificat auto-signé ou un CSR — la clé privée ne quitte jamais votre appareil.",
-      },
-      apiRequestTester: {
-        label: "Testeur de requêtes API",
-        description:
-          "Composer et envoyer des requêtes HTTP à la demande — la seule exception délibérée au zéro appel réseau.",
-      },
-      urlParserBuilder: {
-        label: "Analyseur / constructeur d'URL",
-        description: "Décomposer une URL en champs, ou en construire une de zéro.",
-      },
-      subnetCidrCalculator: {
-        label: "Calculateur de sous-réseau / CIDR",
-        description:
-          "Adresse réseau, diffusion et plage d'hôtes utilisables à partir d'une IP + CIDR.",
-      },
-      cronExplainer: {
-        label: "Explicateur de cron",
-        description:
-          "Explication lisible d'une expression cron, plus les prochaines exécutions.",
-      },
-      dotenvDiffValidator: {
-        label: "Diff et validateur dotenv",
-        description:
-          "Comparer deux fichiers .env pour les clés manquantes, en trop ou différentes.",
-      },
-      networkPortReference: {
-        label: "Référence des ports réseau",
-        description: "Recherche des ports courants et de ce qui les utilise.",
-      },
-      curlRequestBuilder: {
-        label: "cURL ↔ Constructeur de requêtes",
-        description:
-          "Analyser une commande cURL en ses composants, ou en générer une à partir d'une requête.",
-      },
-      systemInfo: {
-        label: "Informations système",
-        description: "Plateforme, architecture, nom d'hôte et locale — lus localement.",
-      },
-      timestampConverter: {
-        label: "Convertisseur de timestamp",
-        description:
-          "Timestamps Unix vers dates et inversement, en secondes ou millisecondes.",
-      },
-      numberBaseConverter: {
-        label: "Convertisseur de base numérique",
-        description: "Conversion binaire, octale, décimale et hexadécimale.",
-      },
-      colorTools: {
-        label: "Outils de couleur",
-        description: "Conversion HEX, RGB, HSL et CMJN avec sélecteur visuel.",
-      },
-      colorPaletteExtractor: {
-        label: "Extracteur de palette de couleurs",
-        description: "Couleurs dominantes d'une image via clustering k-means.",
-      },
-      qrCodeReader: {
-        label: "Lecteur de QR code",
-        description: "Décoder une image de QR code en texte.",
-      },
-      hexBinaryFileInspector: {
-        label: "Inspecteur de fichier hex / binaire",
-        description:
-          "Vidage hexadécimal et détection du type de fichier par magic bytes.",
-      },
-      base64FileEncoder: {
-        label: "Encodeur de fichier Base64",
-        description:
-          "Encoder n'importe quel fichier en base64 ou en URI de données, et décoder en retour.",
-      },
+    categoryDescriptions: {
+      "Formatters & Text":
+        "Mettez en forme, convertissez, comparez et nettoyez du texte et des données structurées.",
+      "Generators":
+        "Produisez des hash, des identifiants, des données de test, des QR codes et des jeux d'icônes.",
+      "Security":
+        "Inspectez jetons et certificats, et créez des clés, sans coller de secrets dans un site web.",
+      "Network & Config":
+        "Travaillez avec des requêtes HTTP, des URL, des sous-réseaux, des planifications et des fichiers d'environnement.",
+      "Converters & Media":
+        "Convertissez timestamps, nombres et couleurs, et regardez à l'intérieur des images et des fichiers binaires.",
     },
+    jumpTo: "aller à",
+    toolCount: "{n} outils",
+    whyOfflineLabel: "pourquoi hors ligne",
+    networkBadge: "utilise le réseau · à la demande",
+    tools,
   },
   verification: {
     heading: "Vérifiable, pas seulement affirmé",

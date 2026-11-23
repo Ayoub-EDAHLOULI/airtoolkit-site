@@ -1,4 +1,5 @@
 import type { Dictionary } from "../types";
+import tools from "../tools/ar";
 
 const dict: Dictionary = {
   meta: {
@@ -107,160 +108,23 @@ const dict: Dictionary = {
       "Network & Config": "الشبكة والإعدادات",
       "Converters & Media": "المحوّلات والوسائط",
     },
-    tools: {
-      jsonFormatter: {
-        label: "منسّق JSON",
-        description: "تنسيق وتصغير والتحقق من صحة JSON.",
-      },
-      xmlCsvFormatter: {
-        label: "منسّق XML / CSV",
-        description: "تنسيق XML وعرض CSV كجدول.",
-      },
-      sqlFormatter: {
-        label: "منسّق SQL",
-        description: "تحويل SQL المصغّر إلى مخرجات مقروءة ومنسّقة بمسافات بادئة.",
-      },
-      markdownPreviewer: {
-        label: "معاينة Markdown",
-        description: "عرض مباشر لـMarkdown أثناء الكتابة.",
-      },
-      jsonYamlToml: {
-        label: "JSON ↔ YAML / TOML",
-        description: "التحويل بين JSON وYAML وTOML.",
-      },
-      regexTester: {
-        label: "مختبر التعبيرات النمطية",
-        description: "تمييز التطابقات، مجموعات الالتقاط، وورقة مرجعية للأنماط.",
-      },
-      diffTool: {
-        label: "أداة المقارنة",
-        description: "مقارنة سطرًا بسطر بين كتلتَي نص.",
-      },
-      caseConverter: {
-        label: "محوّل حالة الأحرف",
-        description: "camelCase وsnake_case وkebab-case والمزيد.",
-      },
-      textUtilities: {
-        label: "أدوات النصوص",
-        description: "الفرز، إزالة التكرار، توحيد المسافات، وعدّ الكلمات والأسطر.",
-      },
-      encodeDecode: {
-        label: "ترميز / فك ترميز",
-        description: "Base64 وترميز URL وكيانات HTML.",
-      },
-      logParserGrep: {
-        label: "محلّل السجلات / Grep",
-        description: "تصفية السجلات متعددة الأسطر حسب نمط، مع عرض للأسطر الأكثر تكرارًا.",
-      },
-      stringEscapeUnescape: {
-        label: "تهريب / إلغاء تهريب النصوص",
-        description: "تهريب JSON وshell وSQL والتعبيرات النمطية في مكان واحد.",
-      },
-      jsonDiff: {
-        label: "مقارنة JSON",
-        description: "مقارنة بنيوية حسب المفتاح/القيمة — تتجاهل إعادة الترتيب والتنسيق.",
-      },
-      jsonSchemaValidator: {
-        label: "مدقق مخطط JSON",
-        description: "التحقق من صحة مستند JSON مقابل JSON Schema.",
-      },
-      scratchpad: {
-        label: "المفكرة",
-        description: "مفكرة محلية متعددة الملاحظات لا تغادر جهازك أبدًا.",
-      },
-      hashUuidGenerator: {
-        label: "مولّد Hash / UUID",
-        description: "توليد MD5 وSHA-1/256/512 وUUID v4.",
-      },
-      fakeDataGenerator: {
-        label: "مولّد بيانات وهمية",
-        description: "أسماء وبريد إلكتروني وعناوين والمزيد لتوليد بيانات اختبار.",
-      },
-      qrCodeGenerator: {
-        label: "مولّد رمز QR",
-        description: "تحويل نص أو رابط إلى رمز QR، قابل للتصدير كصورة PNG.",
-      },
-      faviconGenerator: {
-        label: "مولّد Favicon",
-        description: "صورة واحدة كمدخل، ومجموعة كاملة من أحجام الأيقونات وملف .ico كمخرج.",
-      },
-      jwtDecoder: {
-        label: "فاكّ تشفير JWT",
-        description: "فحص الترويسة والحمولة ومطالبات التوقيع.",
-      },
-      x509CertificateDecoder: {
-        label: "فاكّ تشفير شهادة X.509",
-        description: "الجهة المُصدرة، الموضوع، الصلاحية، وأسماء SAN من شهادة PEM ملصقة.",
-      },
-      passwordStrengthChecker: {
-        label: "فاحص قوة كلمة المرور",
-        description: "تقديرات الإنتروبيا ووقت الاختراق، بالإضافة إلى مولّد كلمات مرور قوية.",
-      },
-      certificateCsrGenerator: {
-        label: "مولّد شهادة / CSR",
-        description: "توليد شهادة موقّعة ذاتيًا أو CSR — المفتاح الخاص لا يغادر جهازك أبدًا.",
-      },
-      apiRequestTester: {
-        label: "مختبر طلبات API",
-        description: "تكوين وإرسال طلبات HTTP عند الطلب — الاستثناء الوحيد المتعمّد لمبدأ صفر اتصالات شبكية.",
-      },
-      urlParserBuilder: {
-        label: "محلّل / منشئ الروابط",
-        description: "تفكيك رابط إلى حقوله، أو بناء رابط من الصفر.",
-      },
-      subnetCidrCalculator: {
-        label: "حاسبة الشبكة الفرعية / CIDR",
-        description: "عنوان الشبكة والبث ونطاق المضيفين القابل للاستخدام من عنوان IP + CIDR.",
-      },
-      cronExplainer: {
-        label: "شارح Cron",
-        description: "شرح مقروء لتعبير cron، بالإضافة إلى أوقات التشغيل القادمة.",
-      },
-      dotenvDiffValidator: {
-        label: "مقارنة ومدقق dotenv",
-        description: "مقارنة ملفَي .env لمعرفة المفاتيح المفقودة أو الزائدة أو المختلفة.",
-      },
-      networkPortReference: {
-        label: "مرجع منافذ الشبكة",
-        description: "بحث في المنافذ الشائعة وما الذي يعمل عليها.",
-      },
-      curlRequestBuilder: {
-        label: "cURL ↔ منشئ الطلبات",
-        description: "تحليل أمر cURL إلى أجزائه، أو توليد واحد من طلب.",
-      },
-      systemInfo: {
-        label: "معلومات النظام",
-        description: "المنصة، المعمارية، اسم المضيف، واللغة — تُقرأ محليًا.",
-      },
-      timestampConverter: {
-        label: "محوّل الطابع الزمني",
-        description: "تحويل الطوابع الزمنية لـUnix إلى تواريخ والعكس، بالثواني أو الميلي ثانية.",
-      },
-      numberBaseConverter: {
-        label: "محوّل الأساس العددي",
-        description: "التحويل بين الثنائي والثماني والعشري والسداسي عشري.",
-      },
-      colorTools: {
-        label: "أدوات الألوان",
-        description: "تحويل HEX وRGB وHSL وCMYK مع منتقي بصري.",
-      },
-      colorPaletteExtractor: {
-        label: "مستخرج لوحة الألوان",
-        description: "استخراج الألوان السائدة من صورة عبر تجميع k-means.",
-      },
-      qrCodeReader: {
-        label: "قارئ رمز QR",
-        description: "فك تشفير صورة رمز QR وإعادتها إلى نص.",
-      },
-      hexBinaryFileInspector: {
-        label: "فاحص الملفات السداسية / الثنائية",
-        description: "تفريغ سداسي عشري وكشف نوع الملف عبر البايتات السحرية لأي ملف.",
-      },
-      base64FileEncoder: {
-        label: "مرمّز ملفات Base64",
-        description: "ترميز أي ملف إلى Base64 أو رابط بيانات، وفك الترميز مرة أخرى.",
-      },
+    categoryDescriptions: {
+      "Formatters & Text":
+        "نسّق النصوص والبيانات المنظّمة وحوّلها وقارنها ونظّفها.",
+      "Generators":
+        "ولّد قيم التجزئة والمعرّفات وبيانات الاختبار ورموز QR ومجموعات الأيقونات.",
+      "Security":
+        "افحص الرموز والشهادات وأنشئ المفاتيح دون لصق أسرارك في موقع ويب.",
+      "Network & Config":
+        "تعامل مع طلبات HTTP والروابط والشبكات الفرعية والجدولة وملفات البيئة.",
+      "Converters & Media":
+        "حوّل الطوابع الزمنية والأرقام والألوان، واطّلع على محتوى الصور والملفات الثنائية.",
     },
+    jumpTo: "انتقل إلى",
+    toolCount: "الأدوات: {n}",
+    whyOfflineLabel: "لماذا دون اتصال",
+    networkBadge: "تستخدم الشبكة · عند الطلب",
+    tools,
   },
   verification: {
     heading: "قابل للتحقق، وليس مجرد ادعاء",

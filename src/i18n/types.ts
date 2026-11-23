@@ -1,7 +1,16 @@
+import type { ToolKey } from "@/lib/tools";
+
 export interface ToolEntryDict {
   label: string;
+  /** One-sentence summary shown under the tool name. */
   description: string;
+  /** 2–4 concrete capabilities, shown as a bullet list. */
+  features: string[];
+  /** Why this tool matters on an offline / locked-down machine. */
+  whyOffline: string;
 }
+
+export type ToolsDict = Record<ToolKey, ToolEntryDict>;
 
 export interface Dictionary {
   meta: {
@@ -63,7 +72,12 @@ export interface Dictionary {
     heading: string;
     subheading: string;
     categories: Record<string, string>;
-    tools: Record<string, ToolEntryDict>;
+    categoryDescriptions: Record<string, string>;
+    jumpTo: string;
+    toolCount: string;
+    whyOfflineLabel: string;
+    networkBadge: string;
+    tools: ToolsDict;
   };
   verification: {
     heading: string;

@@ -100,3 +100,15 @@ export const TOOL_CATEGORIES = [
   "Network & Config",
   "Converters & Media",
 ];
+
+/** URL-fragment ids for each category, e.g. /en/tools#security */
+export const CATEGORY_SLUGS: Record<string, string> = {
+  "Formatters & Text": "formatters",
+  Generators: "generators",
+  Security: "security",
+  "Network & Config": "network",
+  "Converters & Media": "converters",
+};
+
+/** The one tool that touches the network (on demand, user-initiated). */
+export const NETWORK_TOOL: ToolKey = "apiRequestTester";

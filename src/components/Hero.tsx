@@ -1,6 +1,16 @@
+import Image from "next/image";
+import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/types";
 
-export default function Hero({ dict }: { dict: Dictionary }) {
+const STORE_URL = "https://apps.microsoft.com/detail/9P1T6L9P6FZ0";
+
+export default function Hero({
+  lang,
+  dict,
+}: {
+  lang: Locale;
+  dict: Dictionary;
+}) {
   const t = dict.hero;
 
   return (
@@ -16,6 +26,17 @@ export default function Hero({ dict }: { dict: Dictionary }) {
           <p className="mt-4 max-w-lg text-lg text-subtext">{t.body}</p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
+            {/* Official Microsoft badge, served from this site (no third-party request) */}
+            <a href={STORE_URL} target="_blank" rel="noreferrer" className="shrink-0">
+              <Image
+                src={`/badges/ms-store-${lang}.svg`}
+                alt={t.getFromStore}
+                width={161}
+                height={44}
+                unoptimized
+                className="h-11 w-auto"
+              />
+            </a>
             <a
               href="https://github.com/Ayoub-EDAHLOULI/AirToolkit/releases/download/v0.1.0/airtoolkit_0.1.0_x64-setup.exe"
               className="bg-primary px-5 py-2.5 font-mono text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"

@@ -48,6 +48,7 @@ const dict: Dictionary = {
     title: "38 Entwickler-Tools. Null Netzwerkaufrufe.",
     body: "AirToolkit bündelt die Werkzeuge, die Sie täglich brauchen — JSON-Formatierung, Regex-Tests, Hashing, JWT-Dekodierung und mehr — in einer einzigen Desktop-Anwendung, die von sich aus niemals einen Netzwerkaufruf tätigt. Keine Telemetrie, keine automatischen Updates, niemals nach Hause telefonieren.",
     downloadWindows: "für windows herunterladen",
+    getFromStore: "Im Microsoft Store herunterladen",
     viewGithub: "release notes",
     deployNote: "Bereitstellung über Group Policy oder SCCM?",
     grabMsi: "die .msi holen",
@@ -320,7 +321,7 @@ const dict: Dictionary = {
       {
         question: "Welche Plattformen werden unterstützt?",
         answer:
-          "Windows, gebaut mit Tauri. Es wurde speziell für gesperrte Windows-VMs entwickelt, die heute das primäre Ziel sind.",
+          "Windows, gebaut mit Tauri. Es wurde speziell für gesperrte Windows-VMs entwickelt, die heute das primäre Ziel sind. Installieren Sie es aus dem Microsoft Store oder laden Sie den Installer für Offline-Rechner von GitHub herunter.",
       },
       {
         question: "Ist es Open Source?",

@@ -40,6 +40,7 @@ export interface Dictionary {
     title: string;
     body: string;
     downloadWindows: string;
+    getFromStore: string;
     viewGithub: string;
     deployNote: string;
     grabMsi: string;

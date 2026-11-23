@@ -48,6 +48,7 @@ const dict: Dictionary = {
     title: "38 herramientas dev. Cero llamadas de red.",
     body: "AirToolkit reúne las utilidades que usas a diario — formateo de JSON, pruebas de regex, hashing, decodificación de JWT y más — en una sola aplicación de escritorio que nunca hace llamadas de red por su cuenta. Sin telemetría, sin actualizaciones automáticas, sin conexión a servidores. Nunca.",
     downloadWindows: "descargar para windows",
+    getFromStore: "Obtener en Microsoft Store",
     viewGithub: "notas de la versión",
     deployNote: "¿desplegando vía Group Policy o SCCM?",
     grabMsi: "obtén el .msi",
@@ -320,7 +321,7 @@ const dict: Dictionary = {
       {
         question: "¿Qué plataformas admite?",
         answer:
-          "Windows, construido con Tauri. Se creó específicamente para VM de Windows bloqueadas, que son el objetivo principal hoy en día.",
+          "Windows, construido con Tauri. Se creó específicamente para VM de Windows bloqueadas, que son el objetivo principal hoy en día. Instálalo desde Microsoft Store o descarga el instalador desde GitHub para equipos sin conexión.",
       },
       {
         question: "¿Es de código abierto?",

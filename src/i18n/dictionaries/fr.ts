@@ -48,6 +48,7 @@ const dict: Dictionary = {
     title: "38 outils dev. Zéro appel réseau.",
     body: "AirToolkit regroupe les utilitaires que vous utilisez au quotidien — formatage JSON, test de regex, hachage, décodage JWT, et bien plus — dans une seule application de bureau qui ne fait jamais d'appel réseau de son propre chef. Pas de télémétrie, pas de mise à jour automatique, jamais de connexion au serveur.",
     downloadWindows: "télécharger pour windows",
+    getFromStore: "Obtenir sur le Microsoft Store",
     viewGithub: "notes de version",
     deployNote: "déploiement via Group Policy ou SCCM ?",
     grabMsi: "récupérez le .msi",
@@ -320,7 +321,7 @@ const dict: Dictionary = {
       {
         question: "Quelles plateformes sont prises en charge ?",
         answer:
-          "Windows, construit avec Tauri. Il a été conçu spécifiquement pour les VM Windows verrouillées, qui sont la cible principale aujourd'hui.",
+          "Windows, construit avec Tauri. Il a été conçu spécifiquement pour les VM Windows verrouillées, qui sont la cible principale aujourd'hui. Installez-le depuis le Microsoft Store, ou téléchargez l'installeur sur GitHub pour les machines hors ligne.",
       },
       {
         question: "Est-ce open source ?",

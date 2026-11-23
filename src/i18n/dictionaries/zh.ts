@@ -47,6 +47,7 @@ const dict: Dictionary = {
     title: "38 款开发工具。零网络请求。",
     body: "AirToolkit 将你每天都会用到的实用工具——JSON 格式化、正则测试、哈希计算、JWT 解码等——集成到一个桌面应用中，该应用绝不会自行发起任何网络请求。没有遥测，没有自动更新，绝不联网上报。",
     downloadWindows: "下载 windows 版",
+    getFromStore: "从 Microsoft 获取",
     viewGithub: "版本说明",
     deployNote: "通过组策略或 SCCM 部署？",
     grabMsi: "获取 .msi 安装包",
@@ -300,7 +301,7 @@ const dict: Dictionary = {
       },
       {
         question: "它支持哪些平台？",
-        answer: "Windows，使用 Tauri 构建。它专为受限的 Windows 虚拟机打造，目前这是主要目标场景。",
+        answer: "Windows，使用 Tauri 构建。它专为受限的 Windows 虚拟机打造，目前这是主要目标场景。你可以从 Microsoft Store 安装，或在 GitHub 下载安装程序用于离线电脑。",
       },
       {
         question: "它是开源的吗？",

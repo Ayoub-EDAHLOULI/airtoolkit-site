@@ -1,64 +1,47 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { Globe } from "lucide-react";
-import { LOCALES, LOCALE_LABELS, type Locale } from "@/i18n/config";
+import { ChevronDown, Globe } from "lucide-react";
+import { isLocale, LOCALES, LOCALE_LABELS, type Locale } from "@/i18n/config";
 
-function setLocaleCookie(locale: Locale) {
-  document.cookie = `NEXT_LOCALE=${locale};path=/;max-age=31536000`;
-}
+const languageLabel: Record<Locale, string> = {
+  en: "Language",
+  fr: "Langue",
+  es: "Idioma",
+  de: "Sprache",
+  ar: "اللغة",
+  zh: "语言",
+};
 
 export default function LanguageSwitcher({ lang }: { lang: Locale }) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const router = useRouter();
 
-  useEffect(() => {
-    function onClickOutside(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", onClickOutside);
-    return () => document.removeEventListener("mousedown", onClickOutside);
-  }, []);
-
-  function switchTo(next: Locale) {
-    setOpen(false);
-    setLocaleCookie(next);
-    const rest = pathname.split("/").slice(2).join("/");
-    router.push(`/${next}${rest ? `/${rest}` : ""}`);
+  function switchTo(next: string) {
+    if (!isLocale(next)) return;
+    document.cookie = `NEXT_LOCALE=${next};path=/;max-age=31536000`;
+    const segments = pathname.split("/");
+    segments[1] = next;
+    router.push(segments.join("/") + window.location.search + window.location.hash);
   }
 
   return (
-    <div ref={ref} className="relative">
-      <button
-        onClick={() => setOpen((v) => !v)}
-        aria-label="Change language"
-        aria-expanded={open}
-        className="flex items-center gap-1.5 border border-border px-3 py-1.5 font-mono text-sm text-subtext transition-colors hover:border-border-strong hover:text-text"
+    <label className="relative inline-flex h-10 cursor-pointer items-center gap-1.5 rounded-lg px-2 text-sm font-medium text-subtext transition-colors focus-within:outline-2 focus-within:outline-primary hover:bg-white/5 hover:text-text">
+      <Globe size={16} aria-hidden="true" />
+      <span aria-hidden="true" className="uppercase">{lang}</span>
+      <ChevronDown size={13} aria-hidden="true" className="hidden sm:inline" />
+      <select
+        aria-label={languageLabel[lang]}
+        value={lang}
+        onChange={(event) => switchTo(event.target.value)}
+        className="absolute inset-0 size-full cursor-pointer appearance-none rounded-lg bg-surface text-text opacity-0"
       >
-        <Globe size={14} />
-        <span className="hidden sm:inline">{lang}</span>
-      </button>
-
-      {open && (
-        <div className="absolute inset-e-0 top-full mt-2 min-w-36 border border-border bg-surface py-1 font-mono text-sm shadow-lg shadow-black/20">
-          {LOCALES.map((locale) => (
-            <button
-              key={locale}
-              onClick={() => switchTo(locale)}
-              className={`block w-full px-4 py-2 text-start transition-colors hover:bg-surface-hover hover:text-text ${
-                locale === lang ? "text-primary" : "text-subtext"
-              }`}
-            >
-              {LOCALE_LABELS[locale]}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
+        {LOCALES.map((locale) => (
+          <option key={locale} value={locale} lang={locale}>
+            {LOCALE_LABELS[locale]}
+          </option>
+        ))}
+      </select>
+    </label>
   );
 }

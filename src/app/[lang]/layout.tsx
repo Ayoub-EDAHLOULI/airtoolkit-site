@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
-import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import BootScreen from "@/components/BootScreen";
 import { LOCALES, isLocale, dirForLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 
@@ -66,22 +64,9 @@ export default async function LangLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Script
-          id="boot-guard"
-          strategy="beforeInteractive"
-          // Runs before paint so the first frame never flashes the site
-          // behind the boot screen — kept in sync with BootScreen's own key.
-          dangerouslySetInnerHTML={{
-            __html:
-              "try{if(!sessionStorage.getItem('airtoolkit-booted')){document.documentElement.dataset.booting='true'}}catch(e){}",
-          }}
-        />
-        <BootScreen dict={dict} />
-        <div data-boot-target="" className="contents">
-          <Header lang={lang} dict={dict} />
-          <main className="flex-1">{children}</main>
-          <Footer lang={lang} dict={dict} />
-        </div>
+        <Header lang={lang} dict={dict} />
+        <main className="flex-1">{children}</main>
+        <Footer lang={lang} dict={dict} />
         <ScrollToTop />
       </body>
     </html>

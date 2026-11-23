@@ -22,15 +22,6 @@ const dict: Dictionary = {
     privacyDescription:
       "AirToolkit collects no personal information: no accounts, no telemetry, no analytics. What stays on your device, and the few cases where data moves.",
   },
-  boot: {
-    lines: [
-      "$ initializing airtoolkit...",
-      "$ checking network interfaces... none required",
-      "$ loading 38 tools locally",
-      "$ zero network calls detected ✓",
-    ],
-    ready: "ready.",
-  },
   nav: {
     tools: "tools",
     security: "security",
@@ -45,17 +36,17 @@ const dict: Dictionary = {
     privacy: "privacy",
   },
   hero: {
-    badge: "no telemetry · no auto-update · no network calls",
-    title: "38 dev tools. Zero network calls.",
-    body: "AirToolkit bundles the utilities you reach for daily — JSON formatting, regex testing, hashing, JWT decoding, and more — into one desktop app that never makes a network call on its own. No telemetry, no auto-update, no phone-home. Ever.",
-    downloadWindows: "download for windows",
-    getFromStore: "Get it from Microsoft",
-    viewGithub: "release notes",
-    deployNote: "deploying via Group Policy or SCCM?",
-    grabMsi: "grab the .msi",
-    msiSuffix: "instead",
+    badge: "AirToolkit for Windows",
+    title: "38 developer tools.",
+    titleAccent: "One offline workspace.",
+    body: "Format JSON, test regex, and decode JWTs on your own machine. AirToolkit only connects to the network when you send an API request.",
+    downloadWindows: "Download installer",
+    getFromStore: "Get AirToolkit from the Microsoft Store",
+    viewGithub: "Release notes",
+    grabMsi: "MSI installer",
+    previewLabel: "App preview",
+    expandPreview: "View full screenshot",
     terminalComment1: "# block all outbound traffic",
-    terminalComment2: "# app keeps working normally",
   },
   whyOffline: {
     heading: "Why offline matters",
@@ -96,6 +87,74 @@ const dict: Dictionary = {
       },
     ],
     browseTools: "→ browse all tools",
+  },
+  home: {
+    facts: [
+      { value: "38", label: "tools in one app" },
+      { value: "5", label: "categories" },
+      { value: "0", label: "network calls of its own" },
+      { value: "≈ 8.7 MB", label: "native app, not Electron" },
+      { value: "MIT", label: "free and open source" },
+    ],
+    toolbox: {
+      eyebrow: "The toolbox",
+      heading: "Everything you'd normally open a website for.",
+      body: "38 utilities across five categories, in one window, with search. Nothing to set up per tool, and nothing fetched at runtime.",
+      more: "+{n} more",
+      cta: "Browse all 38 tools",
+    },
+    spotlight: {
+      eyebrow: "Sensitive by nature",
+      heading: "Built for the data you can't paste into a website.",
+      body: "Tokens, private keys, .env files and production logs are exactly what you shouldn't hand to an online tool. In AirToolkit they're processed on your device and stay there.",
+    },
+    proof: {
+      eyebrow: "Verifiable",
+      heading: "Don't take our word for it.",
+      body: "\"Zero network calls\" is a claim you can check yourself, from the source code down to the operating system.",
+      methods: [
+        {
+          title: "Static code audit",
+          body: "Search the source for every network API. The only match should be the API Request Tester.",
+        },
+        {
+          title: "OS-level block",
+          body: "Block the app's outbound traffic in Windows Firewall and keep working. Only the API Request Tester is affected.",
+        },
+      ],
+      exceptionComment: "the one documented exception",
+      noMatches: "no matches",
+      cta: "See the full verification",
+    },
+    install: {
+      eyebrow: "Install",
+      heading: "Three ways to install. Pick what fits your machine.",
+      body: "All three install the same app. None of them needs an account or a license key.",
+      recommended: "Recommended",
+      options: [
+        {
+          title: "Microsoft Store",
+          body: "The easiest way. Signed by Microsoft and installed in one click.",
+          cta: "Get AirToolkit from the Microsoft Store",
+        },
+        {
+          title: "Setup installer (.exe)",
+          body: "For machines without Store access. Download it once, then copy it onto the offline machine.",
+          cta: "Download .exe",
+        },
+        {
+          title: "MSI package",
+          body: "For IT teams deploying with Group Policy or SCCM.",
+          cta: "Download .msi",
+        },
+      ],
+      requirements: "Windows 10 (version 1809) or later, 64-bit. Free and open source under the MIT license.",
+    },
+    faqPreview: { heading: "Questions, answered", cta: "Read all questions" },
+    finalCta: {
+      heading: "Install it once. Never think about the network again.",
+      body: "38 developer tools that keep working when the internet doesn't. Free, open source, and on the Microsoft Store.",
+    },
   },
   toolsShowcase: {
     heading: "38 tools, one app",

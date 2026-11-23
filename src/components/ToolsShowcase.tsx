@@ -5,6 +5,7 @@ import {
   NETWORK_TOOL,
 } from "@/lib/tools";
 import Reveal from "./Reveal";
+import { container, heading2 } from "./ui";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/types";
 
@@ -26,13 +27,13 @@ export default function ToolsShowcase({
   }));
 
   return (
-    <section className="py-24">
-      <div className="mx-auto max-w-5xl px-6">
+    <section className="py-16 md:py-20 lg:py-24">
+      <div className={container}>
         <Reveal>
-          <h1 className="text-2xl font-bold tracking-tight text-text sm:text-3xl">
+          <h1 className={heading2}>
             {t.heading}
           </h1>
-          <p className="mt-3 max-w-xl text-subtext">{t.subheading}</p>
+          <p className="mt-3 max-w-2xl text-base leading-relaxed text-subtext sm:text-lg">{t.subheading}</p>
 
           <nav
             aria-label={t.jumpTo}
@@ -43,7 +44,7 @@ export default function ToolsShowcase({
               <a
                 key={slug}
                 href={`#${slug}`}
-                className="border border-border px-3 py-1.5 text-subtext transition-colors hover:border-border-strong hover:text-text"
+                className="rounded-md border border-border px-3 py-1.5 text-subtext transition-colors hover:border-border-strong hover:text-text"
               >
                 {t.categories[category].toLowerCase()}{" "}
                 <span className="text-muted">
@@ -72,7 +73,7 @@ export default function ToolsShowcase({
                 </p>
               </Reveal>
 
-              <div className="mt-5 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2">
+              <div className="mt-5 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2">
                 {tools.map((tool) => {
                   const entry = t.tools[tool.key];
                   const usesNetwork = tool.key === NETWORK_TOOL;
@@ -88,7 +89,7 @@ export default function ToolsShowcase({
                           {entry.label}
                         </h3>
                         {usesNetwork && (
-                          <span className="border border-border-strong px-1.5 py-0.5 font-mono text-[11px] text-subtext">
+                          <span className="rounded border border-border-strong px-1.5 py-0.5 font-mono text-[11px] text-subtext">
                             {t.networkBadge}
                           </span>
                         )}

@@ -22,15 +22,6 @@ const dict: Dictionary = {
     privacyDescription:
       "AirToolkit erhebt keine personenbezogenen Daten: keine Konten, keine Telemetrie, keine Analytics. Was auf Ihrem Gerät bleibt und in welchen wenigen Fällen Daten übertragen werden.",
   },
-  boot: {
-    lines: [
-      "$ airtoolkit wird initialisiert...",
-      "$ Netzwerkschnittstellen werden geprüft... keine erforderlich",
-      "$ 38 Tools werden lokal geladen",
-      "$ null Netzwerkaufrufe erkannt ✓",
-    ],
-    ready: "bereit.",
-  },
   nav: {
     tools: "tools",
     security: "sicherheit",
@@ -45,17 +36,17 @@ const dict: Dictionary = {
     privacy: "datenschutz",
   },
   hero: {
-    badge: "keine Telemetrie · keine Auto-Updates · keine Netzwerkaufrufe",
-    title: "38 Entwickler-Tools. Null Netzwerkaufrufe.",
-    body: "AirToolkit bündelt die Werkzeuge, die Sie täglich brauchen — JSON-Formatierung, Regex-Tests, Hashing, JWT-Dekodierung und mehr — in einer einzigen Desktop-Anwendung, die von sich aus niemals einen Netzwerkaufruf tätigt. Keine Telemetrie, keine automatischen Updates, niemals nach Hause telefonieren.",
-    downloadWindows: "für windows herunterladen",
-    getFromStore: "Im Microsoft Store herunterladen",
-    viewGithub: "release notes",
-    deployNote: "Bereitstellung über Group Policy oder SCCM?",
-    grabMsi: "die .msi holen",
-    msiSuffix: "stattdessen",
+    badge: "AirToolkit für Windows",
+    title: "38 Entwickler-Tools.",
+    titleAccent: "Ein Offline-Arbeitsplatz.",
+    body: "Formatieren Sie JSON, testen Sie reguläre Ausdrücke und dekodieren Sie JWTs direkt auf Ihrem Rechner. AirToolkit greift nur dann auf das Netzwerk zu, wenn Sie eine API-Anfrage senden.",
+    downloadWindows: "Installer herunterladen",
+    getFromStore: "AirToolkit aus dem Microsoft Store herunterladen",
+    viewGithub: "Versionshinweise",
+    grabMsi: "MSI-Installer",
+    previewLabel: "App-Vorschau",
+    expandPreview: "Screenshot in voller Größe ansehen",
     terminalComment1: "# gesamten ausgehenden Datenverkehr blockieren",
-    terminalComment2: "# App funktioniert weiterhin normal",
   },
   whyOffline: {
     heading: "Warum Offline wichtig ist",
@@ -96,6 +87,74 @@ const dict: Dictionary = {
       },
     ],
     browseTools: "→ alle Tools durchsuchen",
+  },
+  home: {
+    facts: [
+      { value: "38", label: "Tools in einer App" },
+      { value: "5", label: "Kategorien" },
+      { value: "0", label: "eigene Netzwerkaufrufe" },
+      { value: "≈ 8,7 MB", label: "native App, kein Electron" },
+      { value: "MIT", label: "kostenlos und Open Source" },
+    ],
+    toolbox: {
+      eyebrow: "Der Werkzeugkasten",
+      heading: "Alles, wofür Sie sonst eine Website öffnen würden.",
+      body: "38 Werkzeuge in fünf Kategorien, in einem Fenster, mit Suche. Nichts pro Tool einzurichten, und nichts wird zur Laufzeit nachgeladen.",
+      more: "+{n} weitere",
+      cta: "Alle 38 Tools ansehen",
+    },
+    spotlight: {
+      eyebrow: "Von Natur aus vertraulich",
+      heading: "Gemacht für Daten, die nicht in eine Website gehören.",
+      body: "Tokens, private Schlüssel, .env-Dateien und Produktionslogs sind genau das, was Sie keinem Online-Tool geben sollten. In AirToolkit werden sie auf Ihrem Gerät verarbeitet und bleiben dort.",
+    },
+    proof: {
+      eyebrow: "Überprüfbar",
+      heading: "Verlassen Sie sich nicht auf unser Wort.",
+      body: "„Null Netzwerkaufrufe“ ist eine Aussage, die Sie selbst prüfen können, vom Quellcode bis zum Betriebssystem.",
+      methods: [
+        {
+          title: "Statische Code-Prüfung",
+          body: "Durchsuchen Sie den Quellcode nach allen Netzwerk-APIs. Der einzige Treffer sollte der API Request Tester sein.",
+        },
+        {
+          title: "Sperre auf Betriebssystemebene",
+          body: "Sperren Sie den ausgehenden Verkehr der App in der Windows-Firewall und arbeiten Sie weiter. Nur der API Request Tester ist betroffen.",
+        },
+      ],
+      exceptionComment: "die eine dokumentierte Ausnahme",
+      noMatches: "keine Treffer",
+      cta: "Zur vollständigen Überprüfung",
+    },
+    install: {
+      eyebrow: "Installation",
+      heading: "Drei Wege zur Installation. Wählen Sie, was zu Ihrem Rechner passt.",
+      body: "Alle drei installieren dieselbe App. Keiner braucht ein Konto oder einen Lizenzschlüssel.",
+      recommended: "Empfohlen",
+      options: [
+        {
+          title: "Microsoft Store",
+          body: "Der einfachste Weg. Von Microsoft signiert und mit einem Klick installiert.",
+          cta: "AirToolkit im Microsoft Store holen",
+        },
+        {
+          title: "Installer (.exe)",
+          body: "Für Rechner ohne Store-Zugang. Einmal herunterladen und auf den Offline-Rechner kopieren.",
+          cta: ".exe herunterladen",
+        },
+        {
+          title: "MSI-Paket",
+          body: "Für IT-Teams, die per Gruppenrichtlinie oder SCCM verteilen.",
+          cta: ".msi herunterladen",
+        },
+      ],
+      requirements: "Windows 10 (Version 1809) oder neuer, 64 Bit. Kostenlos und Open Source unter der MIT-Lizenz.",
+    },
+    faqPreview: { heading: "Fragen und Antworten", cta: "Alle Fragen lesen" },
+    finalCta: {
+      heading: "Einmal installieren. Nie wieder ans Netzwerk denken.",
+      body: "38 Entwickler-Tools, die weiterlaufen, wenn das Internet es nicht tut. Kostenlos, Open Source und im Microsoft Store.",
+    },
   },
   toolsShowcase: {
     heading: "38 Tools, eine App",

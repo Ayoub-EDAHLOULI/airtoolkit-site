@@ -27,10 +27,6 @@ export interface Dictionary {
     privacyTitle: string;
     privacyDescription: string;
   };
-  boot: {
-    lines: string[];
-    ready: string;
-  };
   nav: {
     tools: string;
     security: string;
@@ -47,15 +43,15 @@ export interface Dictionary {
   hero: {
     badge: string;
     title: string;
+    titleAccent: string;
     body: string;
     downloadWindows: string;
     getFromStore: string;
     viewGithub: string;
-    deployNote: string;
     grabMsi: string;
-    msiSuffix: string;
+    previewLabel: string;
+    expandPreview: string;
     terminalComment1: string;
-    terminalComment2: string;
   };
   whyOffline: {
     heading: string;
@@ -67,6 +63,37 @@ export interface Dictionary {
     heading: string;
     steps: { title: string; body: string }[];
     browseTools: string;
+  };
+  home: {
+    facts: { value: string; label: string }[];
+    toolbox: {
+      eyebrow: string;
+      heading: string;
+      body: string;
+      /** "{n}" is replaced with the number of tools not listed on the card. */
+      more: string;
+      cta: string;
+    };
+    spotlight: { eyebrow: string; heading: string; body: string };
+    proof: {
+      eyebrow: string;
+      heading: string;
+      body: string;
+      methods: { title: string; body: string }[];
+      exceptionComment: string;
+      noMatches: string;
+      cta: string;
+    };
+    install: {
+      eyebrow: string;
+      heading: string;
+      body: string;
+      recommended: string;
+      options: { title: string; body: string; cta: string }[];
+      requirements: string;
+    };
+    faqPreview: { heading: string; cta: string };
+    finalCta: { heading: string; body: string };
   };
   toolsShowcase: {
     heading: string;

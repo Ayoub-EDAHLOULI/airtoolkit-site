@@ -22,15 +22,6 @@ const dict: Dictionary = {
     privacyDescription:
       "AirToolkit no recopila información personal: sin cuentas, sin telemetría, sin analíticas. Qué se queda en tu dispositivo y los pocos casos en que se mueven datos.",
   },
-  boot: {
-    lines: [
-      "$ inicializando airtoolkit...",
-      "$ comprobando interfaces de red... ninguna requerida",
-      "$ cargando 38 herramientas localmente",
-      "$ cero llamadas de red detectadas ✓",
-    ],
-    ready: "listo.",
-  },
   nav: {
     tools: "herramientas",
     security: "seguridad",
@@ -45,17 +36,17 @@ const dict: Dictionary = {
     privacy: "privacidad",
   },
   hero: {
-    badge: "sin telemetría · sin actualizaciones automáticas · sin llamadas de red",
-    title: "38 herramientas dev. Cero llamadas de red.",
-    body: "AirToolkit reúne las utilidades que usas a diario — formateo de JSON, pruebas de regex, hashing, decodificación de JWT y más — en una sola aplicación de escritorio que nunca hace llamadas de red por su cuenta. Sin telemetría, sin actualizaciones automáticas, sin conexión a servidores. Nunca.",
-    downloadWindows: "descargar para windows",
-    getFromStore: "Obtener en Microsoft Store",
-    viewGithub: "notas de la versión",
-    deployNote: "¿desplegando vía Group Policy o SCCM?",
-    grabMsi: "obtén el .msi",
-    msiSuffix: "en su lugar",
+    badge: "AirToolkit para Windows",
+    title: "38 herramientas de desarrollo.",
+    titleAccent: "Un entorno sin conexión.",
+    body: "Formatea JSON, prueba expresiones regulares y decodifica JWT en tu equipo. AirToolkit solo se conecta a la red cuando envías una solicitud a una API.",
+    downloadWindows: "Descargar el instalador",
+    getFromStore: "Descargar AirToolkit desde Microsoft Store",
+    viewGithub: "Notas de la versión",
+    grabMsi: "Instalador MSI",
+    previewLabel: "Vista previa de la aplicación",
+    expandPreview: "Ver la captura a tamaño completo",
     terminalComment1: "# bloquear todo el tráfico saliente",
-    terminalComment2: "# la app sigue funcionando con normalidad",
   },
   whyOffline: {
     heading: "Por qué importa el modo sin conexión",
@@ -96,6 +87,74 @@ const dict: Dictionary = {
       },
     ],
     browseTools: "→ explorar todas las herramientas",
+  },
+  home: {
+    facts: [
+      { value: "38", label: "herramientas en una app" },
+      { value: "5", label: "categorías" },
+      { value: "0", label: "llamadas de red por su cuenta" },
+      { value: "≈ 8,7 MB", label: "app nativa, no Electron" },
+      { value: "MIT", label: "gratis y de código abierto" },
+    ],
+    toolbox: {
+      eyebrow: "La caja de herramientas",
+      heading: "Todo aquello para lo que normalmente abrirías un sitio web.",
+      body: "38 utilidades en cinco categorías, en una sola ventana, con búsqueda. Nada que configurar por herramienta y nada descargado en tiempo de ejecución.",
+      more: "+{n} más",
+      cta: "Ver las 38 herramientas",
+    },
+    spotlight: {
+      eyebrow: "Sensible por naturaleza",
+      heading: "Hecho para los datos que no puedes pegar en un sitio web.",
+      body: "Tokens, claves privadas, archivos .env y logs de producción son justo lo que no deberías darle a una herramienta en línea. En AirToolkit se procesan en tu dispositivo y se quedan ahí.",
+    },
+    proof: {
+      eyebrow: "Verificable",
+      heading: "No te fíes solo de nuestra palabra.",
+      body: "«Cero llamadas de red» es algo que puedes comprobar tú mismo, desde el código fuente hasta el sistema operativo.",
+      methods: [
+        {
+          title: "Auditoría estática del código",
+          body: "Busca todas las API de red en el código fuente. La única coincidencia debe ser el Probador de solicitudes API.",
+        },
+        {
+          title: "Bloqueo a nivel del sistema",
+          body: "Bloquea el tráfico saliente de la app en el Firewall de Windows y sigue trabajando. Solo se ve afectado el Probador de solicitudes API.",
+        },
+      ],
+      exceptionComment: "la única excepción documentada",
+      noMatches: "sin coincidencias",
+      cta: "Ver la verificación completa",
+    },
+    install: {
+      eyebrow: "Instalación",
+      heading: "Tres formas de instalar. Elige la que encaje con tu equipo.",
+      body: "Las tres instalan la misma aplicación. Ninguna necesita cuenta ni clave de licencia.",
+      recommended: "Recomendado",
+      options: [
+        {
+          title: "Microsoft Store",
+          body: "La forma más fácil. Firmada por Microsoft e instalada en un clic.",
+          cta: "Obtener AirToolkit en Microsoft Store",
+        },
+        {
+          title: "Instalador (.exe)",
+          body: "Para equipos sin acceso a la Store. Descárgalo una vez y cópialo al equipo sin conexión.",
+          cta: "Descargar .exe",
+        },
+        {
+          title: "Paquete MSI",
+          body: "Para equipos de TI que despliegan con directivas de grupo o SCCM.",
+          cta: "Descargar .msi",
+        },
+      ],
+      requirements: "Windows 10 (versión 1809) o posterior, 64 bits. Gratis y de código abierto con licencia MIT.",
+    },
+    faqPreview: { heading: "Preguntas y respuestas", cta: "Leer todas las preguntas" },
+    finalCta: {
+      heading: "Instálalo una vez. Olvídate de la red para siempre.",
+      body: "38 herramientas para desarrolladores que siguen funcionando cuando internet no. Gratis, de código abierto y en Microsoft Store.",
+    },
   },
   toolsShowcase: {
     heading: "38 herramientas, una sola app",

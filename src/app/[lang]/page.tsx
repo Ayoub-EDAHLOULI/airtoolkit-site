@@ -11,14 +11,52 @@ import FaqPreview from "@/components/FaqPreview";
 import FinalCta from "@/components/FinalCta";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { REPO_URL, STORE_URL } from "@/lib/release";
+import { SITE_NAME, SITE_URL, jsonLd, localizedUrl } from "@/lib/seo";
+import { TOOLS } from "@/lib/tools";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
   const dict = await getDictionary(lang);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: SITE_NAME,
+        inLanguage: lang,
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": `${SITE_URL}/#app`,
+        name: SITE_NAME,
+        description: dict.meta.siteDescription,
+        url: localizedUrl(lang, ""),
+        image: `${SITE_URL}/logo.png`,
+        applicationCategory: "DeveloperApplication",
+        operatingSystem: "Windows 10 (1809+), Windows 11",
+        installUrl: STORE_URL,
+        downloadUrl: STORE_URL,
+        isAccessibleForFree: true,
+        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        license: "https://opensource.org/licenses/MIT",
+        featureList: TOOLS.map((tool) => dict.toolsShowcase.tools[tool.key].label),
+        author: { "@type": "Person", name: "Ayoub Edahlouli", url: "https://ayoubedahlouli.com" },
+        sameAs: [STORE_URL, REPO_URL],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }}
+      />
       <Hero lang={lang} dict={dict} />
       <KeyFacts dict={dict} />
       <Toolbox lang={lang} dict={dict} />

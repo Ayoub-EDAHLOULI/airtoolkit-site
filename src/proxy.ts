@@ -38,6 +38,7 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next|api|favicon.ico|icon.png|logo.png|badges/|previews/).*)",
+    // Static files and crawler endpoints must never get a locale redirect.
+    "/((?!_next|api|favicon.ico|icon.png|logo.png|robots.txt|sitemap.xml|google[a-z0-9]+\\.html|badges/|previews/).*)",
   ],
 };

@@ -4,8 +4,9 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import { LOCALES, isLocale, dirForLocale } from "@/i18n/config";
+import { DEFAULT_LOCALE, LOCALES, isLocale, dirForLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { SITE_NAME, SITE_URL, pageMetadata } from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,30 +22,27 @@ export async function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
 }
 
-// TODO: swap /logo.png for a real 1200x630 og-image before launch — the
-// square logo works as a stopgap but a proper OG image reads much better
-// in link previews (Slack, Twitter, iMessage, etc.).
+// Defaults for every page (and the full metadata for the home page). Each
+// subpage overrides title/description/canonical via pageMetadata(). The
+// social preview image comes from ./opengraph-image.tsx.
 export async function generateMetadata({
   params,
 }: LayoutProps<"/[lang]">): Promise<Metadata> {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const locale = isLocale(lang) ? lang : DEFAULT_LOCALE;
+  const dict = await getDictionary(locale);
 
   return {
-    title: dict.meta.siteTitle,
-    description: dict.meta.siteDescription,
-    openGraph: {
+    metadataBase: new URL(SITE_URL),
+    applicationName: SITE_NAME,
+    authors: [{ name: "Ayoub Edahlouli", url: "https://ayoubedahlouli.com" }],
+    creator: "Ayoub Edahlouli",
+    ...pageMetadata({
+      lang: locale,
+      path: "",
       title: dict.meta.siteTitle,
       description: dict.meta.siteDescription,
-      type: "website",
-      images: ["/logo.png"],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: dict.meta.siteTitle,
-      description: dict.meta.siteDescription,
-      images: ["/logo.png"],
-    },
+    }),
   };
 }
 
